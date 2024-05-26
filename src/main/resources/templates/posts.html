@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <title>Posts</title>
+    <meta name = "Author" content = "NeoCourney">
+    <meta name = "Description" content = "Avaricaciously Provocatie and appeling post container">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" th:href="@{/css/posts.css}">
+</head>
+<body>
+
+ <article>
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+         	<div>
+         	 <a class="nav-link create-account-btn me-2" role="button" sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/createAccount}">Create Account</a>
+         	</div>
+             <a class="navbar-brand" href="#">My Sedutive Blog Posts</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+    	      	<ul class="navbar-nav ms-auto">
+    				<li class="nav-item">
+        				<a class="nav-link btn-outline-primary rounded-pill fw-bold me-2" id="create-btn" role="button" th:href="@{/createNewPost}" sec:authorize="hasRole('ROLE_ADMIN')">Create New Post</a>
+    				</li>
+    				<li class="nav-item" sec:authorize="isAuthenticated()">
+        				<a class="nav-link logout-btn" role="button" aria-label="logout-btn" th:href="@{/logout}">Logout</a>
+    				</li>
+				</ul>
+            </div>
+        </div>
+    </nav>
+    </article>
+	<aside>
+		<div th:if = "${SuccessMessage}" class = "alert alert-success fade show alert-dismissible" role = "alert">
+			<strong th:text = "${SuccessMessage}"></strong>
+			 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+		
+		<div th:if = "${clutteredMessage}" class = "alert alert-danger fade show alert-dismissible" role = "alert">
+			<strong th:text = "${clutteredMessage}"></strong>
+			 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+		
+		<div th:if = "${accountSucessMessage}" class = "alert alert-success fade show alert-dismissible" role = "alert">
+			<strong th:text = "${accountSucessMessage}"></strong>
+			 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+		
+		<div th:if = "${aaccountFailedMessage}" class = "alert alert-danger fade show alert-dismissible" role = "alert">
+			<strong th:text = "${accountFailedMessage}"></strong>
+			 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+	
+	</aside>
+     <div class="container mt-5">
+        <h2 class="mb-4">Flirtatious Blog Posts</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4" th:each="post : ${posts}" >
+                <div class="card">
+                    <img th:src="${post.imgURL}" class="card-img-top" alt="Post Image">
+                    <div class="card-body">
+                        <h5 class="card-title" th:text="${post.title}"></h5>
+                        <p class="card-text" th:text="${post.content}"></p>
+                    </div>
+                    <div class = "card-footer d-flex justify-content-between">
+                    		<a type = "button" class="btn btn-danger mb-3" data-bs-toggle="modal" th:data-bs-target="'#deleteModal' + ${post.id}" sec:authorize = "hasRole('ROLE_ADMIN')" >Delete Post</a>
+                    		<a type = "button" class = "btn btn-primary mb-3" th:href = "@{'/posts/edit/' + ${post.id}}" sec:authorize = "hasRole('ROLE_ADMIN')" >Edit Post</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+ <div th:each = "post : ${posts}">
+  <div class="modal fade modal-fullscreen" th:id="'deleteModal' + ${post.id}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Confirm Deletion</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete this post?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <a th:href = "@{'/posts/delete/' + ${post.id}}" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+<script>
+        document.addEventListener("DOMContentLoaded", () => {
+            var alertList = document.querySelectorAll('.alert');
+            alertList.forEach((alert) => {
+                setTimeout(() => {
+                    alert.classList.add('fade-out');
+                    setTimeout( () => {
+                        alert.style.display = 'none';
+                    }, 500); 
+                }, 3000); 
+            });
+        });
+    </script>
+    
+</body>
+</html>

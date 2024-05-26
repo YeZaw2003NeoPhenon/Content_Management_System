@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "C:\Users\Acer\Desktop\mybatis-3-mapper.dtd">
+        
+    <mapper namespace = "com.example.Content_Management_System.repository.PostMapper">
+        
+        <resultMap type = "Post" id = "PostResultMap">
+        	<id column = "id" property = "id"></id>
+        	<result column = "title" property = "title"/>
+        	<result column = "content" property = "content"/>
+        	<result column = "imgURL" property = "imgURL"/>
+        </resultMap>
+        
+        <select id = "getAllPosts" resultMap = "PostResultMap">
+         	SELECT id,title,content,imgURL FROM Post;
+        </select>
+        
+        <insert id = "postInsertion" parameterType = "Post" keyProperty = "id" useGeneratedKeys = "true">
+         	INSERT INTO Post ( title , content ,imgURL ) VALUES ( #{title} , #{content} , #{imgURL} );
+        </insert>
+       
+        
+     <select id="getPostById" resultMap="PostResultMap" parameterType="int">
+        SELECT id, title, content, imgURL FROM Post WHERE id = #{id}
+    </select>
+    
+        <delete id = "deletePost" parameterType = "int">
+        	DELETE FROM Post WHERE id = #{id};
+        </delete>
+        
+      <update id = "updatePost" parameterType = "Post" > 
+       		UPDATE Post
+      		<set>
+      			<if test = "title != null "> title = #{title},</if>
+      			<if test = "content != null "> content = #{content},</if>
+      			<if test = "imgURL != null "> imgURL = #{imgURL}</if>
+      		</set>
+      		WHERE id = #{id};
+      </update>
+      
+   </mapper>

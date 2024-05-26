@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Update Post</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" th:href="@{/css/updatePost.css}">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Update Post</h2>
+        <div class="card">
+            <div class="card-body">
+                <form th:action = "@{/update}" th:object="${post}" method="post" enctype="multipart/form-data">
+                	<input type = "hidden" class = "form-control" id = "id =" th:field = "*{id}">
+                    <div class="form-group">
+                        <label for="title">Title:</label>
+                        <input type="text" class="form-control" id="title" name="title" th:field="*{title}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Content:</label>
+                        <textarea class="form-control" id="content" name="content" th:field="*{content}" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group custom-file-input">
+                         <label for="imageFile">Choose file</label>
+                         <input type="file" class="form-control-file" id="imageFile" name="imageFile">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Update</button>
+                </form>
+            </div>
+        </div>
+        <a href="#" th:href="@{/posts}" class="btn btn-secondary mt-3">Back to Posts</a>
+    </div>
+</body>
+</html>

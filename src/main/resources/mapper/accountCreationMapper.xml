@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "C:\Users\Acer\Desktop\mybatis-3-mapper.dtd">
+ 
+ <mapper namespace = "com.example.Content_Management_System.repository.accountCreationRepository">
+ 		
+ 		<insert id = "createUserAccount" parameterType = "userDetailModel" >
+ 			INSERT INTO users (username , password , enabled) VALUES ( #{username} , #{password} , #{enabled} );
+ 		</insert>
+ 		
+ 		 	<insert id = "createAdminAccount" parameterType = "userDetailModel">
+ 			INSERT INTO authorities (username, authority) VALUES ( #{username} , #{authority} );
+ 		</insert>
+ </mapper>

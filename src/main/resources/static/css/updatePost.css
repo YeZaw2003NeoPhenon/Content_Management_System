@@ -1,0 +1,130 @@
+body {
+    background-color: #f3f4f6;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 30px;
+}
+
+h2 {
+    color: #1a202c;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: #4a5568;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-control, .form-control-file {
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-control:focus, .form-control-file:focus {
+    border-color: #3182ce;
+    box-shadow: 0 0 8px rgba(49, 130, 206, 0.2);
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.btn-primary {
+    background-color: #3182ce;
+    border-color: #3182ce;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #2b6cb0;
+    border-color: #2b6cb0;
+}
+
+.btn-secondary {
+    background-color: #a0aec0;
+    border-color: #a0aec0;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-secondary:hover {
+    background-color: #718096;
+    border-color: #718096;
+}
+
+.custom-file-input {
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-file-input input[type="file"] {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.custom-file-label {
+    display: block;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #e2e8f0;
+    background-color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+.custom-file-input:hover .custom-file-label {
+    border-color: #3182ce;
+    box-shadow: 0 0 8px rgba(49, 130, 206, 0.2);
+}
+
+.custom-file-input input[type="file"]:focus + .custom-file-label {
+    border-color: #3182ce;
+    box-shadow: 0 0 8px rgba(49, 130, 206, 0.2);
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 20px;
+        margin-top: 20px;
+    }
+}
