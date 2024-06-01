@@ -1,14 +1,11 @@
 package com.example.Content_Management_System.controller;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
+
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,8 +20,6 @@ import com.example.Content_Management_System.fileHandler.multiPartFileHandler;
 import com.example.Content_Management_System.model.Post;
 import com.example.Content_Management_System.service.postServiceImp;
 
-import jakarta.servlet.ServletContext;
-
 @Controller
 public class postController {
 	
@@ -33,6 +28,8 @@ public class postController {
 	
 	@Autowired
 	private multiPartFileHandler multiPartFileHandler; 
+	
+	private Logger LOGGER = LoggerFactory.getLogger(postController.class);
 	
   @RequestMapping( value = {"/posts" , "/" }, method = RequestMethod.GET)
   public ModelAndView getAllPosts() {
@@ -71,17 +68,18 @@ public class postController {
 	   	
 	  if( result > 0 ) {
 		  redirectAttributes.addFlashAttribute("SuccessMessage", "Post Created Unblemishedly ");
+		  LOGGER.info("Post created Unblemishedly : {}"+postToBeSaved.getId());
 	  }
 	 
 	  else {
 		  redirectAttributes.addFlashAttribute("clutteredMessage", "Post failed to be created Successfully ");
+		  LOGGER.error("Post failed to be created Successfully : {}"+postToBeSaved.getId());
 	  }
 	  
 		 modelAndView.setViewName("redirect:/posts");
 		return modelAndView;
   }
-  
-
+ 
 
 @RequestMapping( value = "/posts/delete/{id}" , method = RequestMethod.GET)
   public ModelAndView deletePost( @PathVariable int id , RedirectAttributes redirectAttributes ) {
@@ -89,9 +87,11 @@ public class postController {
 	  int result =  postServiceImp.deletePost(id);
 	  if( result > 0 ) {
 		  redirectAttributes.addFlashAttribute("SuccessMessage", "Post Deleted Successfully ");
+		  LOGGER.info("Post Deleted Successfully : {}",id );
 	  }
 	  else {
-		  redirectAttributes.addFlashAttribute("clutteredMessage", "Post Failed to be updated Successfully ");
+		  redirectAttributes.addFlashAttribute("clutteredMessage", "Post Failed to be Deleted Successfully ");
+		  LOGGER.error("Post Failed to be Deleted Successfully:{}",id );
 	  }
 	  modelAndView.setViewName("redirect:/posts");
 	  return modelAndView;
@@ -117,16 +117,20 @@ public class postController {
 		  }
 		  else {
 			  redirectAttributes.addFlashAttribute("clutteredMessage", "Failed to upload image file");
+			  LOGGER.warn("Failed to upload new image for post: {}", post.getId());
 	            modelAndView.setViewName("redirect:/posts");
 	            return modelAndView;
 		  }
 	  }
+	  
 	  int result =  postServiceImp.updatePost(post);
 	  if( result > 0 ) {
 		  redirectAttributes.addFlashAttribute("SuccessMessage", "Posts Updated Successfully!" );
+		  LOGGER.info("Posts Updated Successfully : {}" , post.getId());
 	  }
 	  else {
 		  redirectAttributes.addFlashAttribute("clutteredMessage", "Posts slugishingly Failed to update" );
+		  LOGGER.error("Posts slugishingly Failed to update : {}" ,post.getId());
 	  }
 	  
 	  modelAndView.setViewName("redirect:/posts");
