@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<configuration>
+			<property name="LOGS" value="C:/Users/Acer/Desktop/Content_Management_System/src/main/resources/logs"/>
+			<appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+				<layout class="ch.qos.logback.classic.PatternLayout">
+				<!-- logger => to fastidiously outputs the package and name of class where log message buckled up -->
+					<Pattern> %black(%d{ISO8601}) %green([%thread]) %highlight(%-5level) %logger{50} - %msg%n</Pattern>
+				</layout>
+			</appender>
+		<timestamp key="myTimestamp" datePattern="yyyy-MM-dd"/>
+	<appender name="RollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+				<file>${LOGS}/spring-bendable-logger-${myTimestamp}.log</file>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+				<Pattern>%d{yyyy-MM-dd_HH:mm:ss.SSS} - %msg%n</Pattern>
+		</encoder>
+	<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+<!--  rollover daily and when the file reaches 10 MegaBytes -->
+	<fileNamePattern>${LOGS}/archived/spring-boot-logger-%d{yyyy-MM-dd}.%i.log </fileNamePattern>
+	
+	<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+	
+	<maxFileSize>3KB</maxFileSize>
+	
+	</timeBasedFileNamingAndTriggeringPolicy>
+	
+   </rollingPolicy>
+   
+</appender>
+	<!-- knuckle down on this whatever info messages we display -->
+	<root level="info">
+		<appender-ref ref="RollingFile"/>
+		<appender-ref ref="Console"/>
+	</root>
+<!--  LOG "com.pita.b2.pita_mvc" at TRACE level  -->
+	<logger name="com.example.Content_Management_System" level="trace" additivity="false">
+		<appender-ref ref="RollingFile"/>
+		<appender-ref ref="Console"/>
+	</logger>	
+</configuration>
