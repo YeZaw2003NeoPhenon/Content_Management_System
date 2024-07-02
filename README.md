@@ -17,7 +17,11 @@ I have created a Content Management System (CMS) using modern technologies and f
 The backend is implemented using Spring MVC and Spring Security, providing a RESTful API for managing posts and user authentication. It utilizes MyBatis for database interaction and integrates with PostgreSQL for data persistence.
 
 ## System Requirements
--- User Can 
+## Authorizations
+
+- **Admin Access**: Admin users have full CRUD access to posts and user management features.
+- **User Access**: Regular users can create, read, update, and delete their own posts.
+
 ## Technologies
 -------------------------
 1. Spring MVC
