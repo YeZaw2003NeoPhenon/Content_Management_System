@@ -12,7 +12,13 @@ I have created a Content Management System (CMS) using modern technologies and f
 - ``Database Integration``: Data persistence using PostgreSQL and MyBatis.
 - ``Logging``: Efficient logging using Logback.
 
-## Technologies that was gratifyingly contributed were 
+## Spring Backend
+
+The backend is implemented using Spring MVC and Spring Security, providing a RESTful API for managing posts and user authentication. It utilizes MyBatis for database interaction and integrates with PostgreSQL for data persistence.
+
+## System Requirements
+-- User Can 
+## Technologies
 -------------------------
 1. Spring MVC
 2. Spring Security
@@ -21,3 +27,25 @@ I have created a Content Management System (CMS) using modern technologies and f
 5. postgresql database
 6. mybatis framework
 7. File Handling
+ 
+### Running the Application
+
+To run the application locally:
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/yourusername/your-repo.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd your-repo
+    ```
+3. Build the application:
+    ```bash
+    mvn clean install
+    ```
+4. Run the application:
+    ```bash
+    mvn spring-boot:run
+    ```
+
