@@ -11,7 +11,7 @@ I have created a Content Management System (CMS) using modern technologies and f
 - ``Responsive Design``: User-friendly and responsive UI using Thymeleaf templates with Bootstrap.
 - ``Database Integration``: Data persistence using PostgreSQL and MyBatis.
 - ``Logging``: Efficient logging using Logback.
-- 
+
 ## Technologies that was gratifyingly contributed were 
 -------------------------
 1. Spring MVC
