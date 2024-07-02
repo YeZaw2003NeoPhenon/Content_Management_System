@@ -16,7 +16,6 @@ I have created a Content Management System (CMS) using modern technologies and f
 
 The backend is implemented using Spring MVC and Spring Security, providing a RESTful API for managing posts and user authentication. It utilizes MyBatis for database interaction and integrates with PostgreSQL for data persistence.
 
-## System Requirements
 ## Authorizations
 
 - **Admin Access**: Admin users have full CRUD access to posts and user management features.
@@ -31,7 +30,13 @@ The backend is implemented using Spring MVC and Spring Security, providing a RES
 5. postgresql database
 6. mybatis framework
 7. File Handling
- 
+
+## System Requirement
+- Java Development Kit (JDK) 8 
+- Apache Maven (for building the project)
+- PostgreSQL Database
+- Web Browser (Chrome, Firefox, etc.)
+  
 ### Running the Application
 
 To run the application locally:
