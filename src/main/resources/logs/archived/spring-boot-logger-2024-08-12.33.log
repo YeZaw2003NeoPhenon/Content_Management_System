@@ -1,0 +1,36 @@
+2024-08-12_23:12:42.334 - Failed to deleted temporary file used for part [imageFile]
+java.io.UncheckedIOException: Cannot delete C:\Users\Acer\AppData\Local\Temp\tomcat.8080.8599544806245404840\work\Tomcat\localhost\ROOT\upload_95e6d50d_5343_4bea_b337_2fc66623fc02_00000007.tmp
+	at org.apache.tomcat.util.http.fileupload.disk.DiskFileItem.delete(DiskFileItem.java:428)
+	at org.apache.catalina.core.ApplicationPart.delete(ApplicationPart.java:53)
+	at org.apache.catalina.connector.Request.recycle(Request.java:475)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:420)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Cannot delete C:\Users\Acer\AppData\Local\Temp\tomcat.8080.8599544806245404840\work\Tomcat\localhost\ROOT\upload_95e6d50d_5343_4bea_b337_2fc66623fc02_00000007.tmp
+	... 13 common frames omitted
+2024-08-12_23:12:42.340 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-12_23:12:42.341 - ==> Parameters: 
+2024-08-12_23:12:42.342 - <==    Columns: id, title, content, imgurl
+2024-08-12_23:12:42.342 - <==        Row: 58, Lets cheer on for majestic compensation and drink ultil extorionate, ff........., /uploads/fauana.jpg
+2024-08-12_23:12:42.342 - <==        Row: 56, nn, sophisticated , glamorously spectacular blog post, /uploads/flora.jpg
+2024-08-12_23:12:42.342 - <==        Row: 49, k, ijiih, /uploads/mainFoodColImg1.jpg
+2024-08-12_23:12:42.343 - <==        Row: 55, kk, awesome car, /uploads/mainFoodColImg2.jpg
+2024-08-12_23:12:42.343 - <==      Total: 4
+2024-08-12_23:12:42.343 - Scraching around the collections all posts
+2024-08-12_23:12:45.764 - ==>  Preparing: SELECT id, title, content, imgURL FROM Post WHERE id = ?
+2024-08-12_23:12:45.765 - ==> Parameters: 56(Integer)
+2024-08-12_23:12:45.766 - <==    Columns: id, title, content, imgurl
+2024-08-12_23:12:45.766 - <==        Row: 56, nn, sophisticated , glamorously spectacular blog post, /uploads/flora.jpg
+2024-08-12_23:12:45.767 - <==      Total: 1
+2024-08-12_23:13:05.048 - Attempting to save file: mainFoodColImg3.jpg
+2024-08-12_23:13:05.048 - Upload directory: C:\Users\Acer\AppData\Local\Temp\tomcat-docbase.8080.7446092866478929144\uploads\
+2024-08-12_23:13:05.049 - Final file path: C:\Users\Acer\AppData\Local\Temp\tomcat-docbase.8080.7446092866478929144\uploads\mainFoodColImg3.jpg
+2024-08-12_23:13:05.049 - File saved successfully: mainFoodColImg3.jpg
+2024-08-12_23:13:05.050 - ==>  Preparing: UPDATE Post SET title = ?, content = ?, imgURL = ? WHERE id = ?;

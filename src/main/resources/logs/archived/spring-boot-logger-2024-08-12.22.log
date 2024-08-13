@@ -1,0 +1,163 @@
+2024-08-12_23:01:06.118 - LiveReload server is running on port 35729
+2024-08-12_23:01:06.176 - Starting ProtocolHandler ["http-nio-8080"]
+2024-08-12_23:01:06.223 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-08-12_23:01:06.242 - Started ContentManagementSystemApplication in 6.15 seconds (JVM running for 7.06)
+2024-08-12_23:01:52.735 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-12_23:01:52.736 - Initializing Servlet 'dispatcherServlet'
+2024-08-12_23:01:52.739 - Completed initialization in 3 ms
+2024-08-12_23:01:52.816 - HikariPool-1 - Starting...
+2024-08-12_23:01:53.031 - HikariPool-1 - Start completed.
+2024-08-12_23:01:53.043 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?
+2024-08-12_23:01:53.062 - ==> Parameters: Neo(String)
+2024-08-12_23:01:53.087 - <==    Columns: username, password, enabled, authority
+2024-08-12_23:01:53.087 - <==        Row: Neo, $2a$12$TxOY073F7yTp0qTMxSn1qOLWOjzOtjn2Dc6LfteXId5qqLHqGn9vy, t, ADMIN
+2024-08-12_23:01:53.092 - <==      Total: 1
+2024-08-12_23:01:53.231 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-12_23:01:53.231 - ==> Parameters: 
+2024-08-12_23:01:53.233 - <==    Columns: id, title, content, imgurl
+2024-08-12_23:01:53.234 - <==        Row: 55, kk, awesome car, /uploads/ludicrousImg.jpg
+2024-08-12_23:01:53.234 - <==        Row: 49, k, ijiih, /uploads/carImage3.jpg
+2024-08-12_23:01:53.235 - <==        Row: 50, m, m, /uploads/carImage4.jpg
+2024-08-12_23:01:53.236 - <==        Row: 56, nn, sophisticated , glamorously spectacular blog post, /uploads/restaurntChiefImg.jpg
+2024-08-12_23:01:53.236 - <==      Total: 4
+2024-08-12_23:01:53.237 - Scraching around the collections all posts
+2024-08-12_23:02:03.241 - ==>  Preparing: SELECT id, title, content, imgURL FROM Post WHERE id = ?
+2024-08-12_23:02:03.244 - ==> Parameters: 49(Integer)
+2024-08-12_23:02:03.248 - <==    Columns: id, title, content, imgurl
+2024-08-12_23:02:03.250 - <==        Row: 49, k, ijiih, /uploads/carImage3.jpg
+2024-08-12_23:02:03.250 - <==      Total: 1
+2024-08-12_23:02:19.812 - Created directories for upload path: C:\Users\Acer\AppData\Local\Temp\tomcat-docbase.8080.2067886864817020129\uploads\
+2024-08-12_23:02:19.818 - Attempting to save file: carImage2.jpg
+2024-08-12_23:02:19.819 - Upload directory: C:\Users\Acer\AppData\Local\Temp\tomcat-docbase.8080.2067886864817020129\uploads\
+2024-08-12_23:02:19.819 - Final file path: C:\Users\Acer\AppData\Local\Temp\tomcat-docbase.8080.2067886864817020129\uploads\carImage2.jpg
+2024-08-12_23:02:19.819 - File saved successfully: carImage2.jpg
+2024-08-12_23:02:19.821 - ==>  Preparing: UPDATE Post SET title = ?, content = ?, imgURL = ? WHERE id = ?;
+2024-08-12_23:02:19.822 - ==> Parameters: k(String), ijiih(String), /uploads/carImage2.jpg(String), 49(Integer)
+2024-08-12_23:02:19.824 - <==    Updates: 1
+2024-08-12_23:02:19.825 - Posts Updated Successfully : 49
+2024-08-12_23:02:19.850 - Failed to perform cleanup of multipart items
+java.io.UncheckedIOException: Cannot delete C:\Users\Acer\AppData\Local\Temp\tomcat.8080.69874544741781284\work\Tomcat\localhost\ROOT\upload_38cf3542_fbb9_479d_a94f_f9aa21c348a6_00000003.tmp
+	at org.apache.tomcat.util.http.fileupload.disk.DiskFileItem.delete(DiskFileItem.java:428)
+	at org.apache.catalina.core.ApplicationPart.delete(ApplicationPart.java:53)
+	at org.springframework.web.multipart.support.StandardServletMultipartResolver.cleanupMultipart(StandardServletMultipartResolver.java:134)
+	at org.springframework.web.servlet.DispatcherServlet.cleanupMultipart(DispatcherServlet.java:1251)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1108)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:106)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:97)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.ConcurrentSessionFilter.doFilter(ConcurrentSessionFilter.java:147)
+	at org.springframework.security.web.session.ConcurrentSessionFilter.doFilter(ConcurrentSessionFilter.java:125)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:223)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:217)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Cannot delete C:\Users\Acer\AppData\Local\Temp\tomcat.8080.69874544741781284\work\Tomcat\localhost\ROOT\upload_38cf3542_fbb9_479d_a94f_f9aa21c348a6_00000003.tmp
+	... 91 common frames omitted
+2024-08-12_23:02:19.855 - Failed to deleted temporary file used for part [imageFile]
+java.io.UncheckedIOException: Cannot delete C:\Users\Acer\AppData\Local\Temp\tomcat.8080.69874544741781284\work\Tomcat\localhost\ROOT\upload_38cf3542_fbb9_479d_a94f_f9aa21c348a6_00000003.tmp
+	at org.apache.tomcat.util.http.fileupload.disk.DiskFileItem.delete(DiskFileItem.java:428)
+	at org.apache.catalina.core.ApplicationPart.delete(ApplicationPart.java:53)
+	at org.apache.catalina.connector.Request.recycle(Request.java:475)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:420)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Cannot delete C:\Users\Acer\AppData\Local\Temp\tomcat.8080.69874544741781284\work\Tomcat\localhost\ROOT\upload_38cf3542_fbb9_479d_a94f_f9aa21c348a6_00000003.tmp
+	... 13 common frames omitted
+2024-08-12_23:02:19.860 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-12_23:02:19.860 - ==> Parameters: 
+2024-08-12_23:02:19.861 - <==    Columns: id, title, content, imgurl
+2024-08-12_23:02:19.862 - <==        Row: 55, kk, awesome car, /uploads/ludicrousImg.jpg
+2024-08-12_23:02:19.862 - <==        Row: 50, m, m, /uploads/carImage4.jpg
+2024-08-12_23:02:19.862 - <==        Row: 56, nn, sophisticated , glamorously spectacular blog post, /uploads/restaurntChiefImg.jpg
+2024-08-12_23:02:19.863 - <==        Row: 49, k, ijiih, /uploads/carImage2.jpg
+2024-08-12_23:02:19.863 - <==      Total: 4
+2024-08-12_23:02:19.864 - Scraching around the collections all posts
+2024-08-12_23:07:39.737 - Starting ContentManagementSystemApplication using Java 1.8.0_202 on DESKTOP-0FGFVV5 with PID 1672 (C:\Users\Acer\Desktop\Content_Management_System\target\classes started by Acer in C:\Users\Acer\Desktop\Content_Management_System)
+2024-08-12_23:07:39.739 - Running with Spring Boot v2.7.17, Spring v5.3.30
+2024-08-12_23:07:39.741 - No active profile set, falling back to 1 default profile: "default"
+2024-08-12_23:07:39.886 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-12_23:07:39.887 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'

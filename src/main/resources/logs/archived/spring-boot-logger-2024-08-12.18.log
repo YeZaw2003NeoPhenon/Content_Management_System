@@ -1,0 +1,40 @@
+2024-08-12_22:53:38.190 - <==        Row: 55, kk, awesome car, /uploads/ludicrousImg.jpg
+2024-08-12_22:53:38.193 - <==        Row: 49, k, ijiih, /uploads/carImage3.jpg
+2024-08-12_22:53:38.195 - <==        Row: 50, m, m, /uploads/carImage4.jpg
+2024-08-12_22:53:38.196 - <==      Total: 4
+2024-08-12_22:53:38.196 - Scraching around the collections all posts
+2024-08-12_22:53:47.436 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?
+2024-08-12_22:53:47.458 - ==> Parameters: Neo(String)
+2024-08-12_22:53:47.460 - <==    Columns: username, password, enabled, authority
+2024-08-12_22:53:47.460 - <==        Row: Neo, $2a$12$TxOY073F7yTp0qTMxSn1qOLWOjzOtjn2Dc6LfteXId5qqLHqGn9vy, t, ADMIN
+2024-08-12_22:53:47.461 - <==      Total: 1
+2024-08-12_22:53:47.804 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?
+2024-08-12_22:53:47.805 - ==> Parameters: Neo(String)
+2024-08-12_22:53:47.806 - <==    Columns: username, password, enabled, authority
+2024-08-12_22:53:47.806 - <==        Row: Neo, $2a$12$TxOY073F7yTp0qTMxSn1qOLWOjzOtjn2Dc6LfteXId5qqLHqGn9vy, t, ADMIN
+2024-08-12_22:53:47.806 - <==      Total: 1
+2024-08-12_22:53:47.814 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-12_22:53:47.814 - ==> Parameters: 
+2024-08-12_22:53:47.815 - <==    Columns: id, title, content, imgurl
+2024-08-12_22:53:47.816 - <==        Row: 56, nn, nnnn, /uploads/colTechImgTwo.jpg
+2024-08-12_22:53:47.816 - <==        Row: 55, kk, awesome car, /uploads/ludicrousImg.jpg
+2024-08-12_22:53:47.818 - <==        Row: 49, k, ijiih, /uploads/carImage3.jpg
+2024-08-12_22:53:47.820 - <==        Row: 50, m, m, /uploads/carImage4.jpg
+2024-08-12_22:53:47.820 - <==      Total: 4
+2024-08-12_22:53:47.820 - Scraching around the collections all posts
+2024-08-12_22:53:53.693 - ==>  Preparing: SELECT id, title, content, imgURL FROM Post WHERE id = ?
+2024-08-12_22:53:53.695 - ==> Parameters: 56(Integer)
+2024-08-12_22:53:53.696 - <==    Columns: id, title, content, imgurl
+2024-08-12_22:53:53.697 - <==        Row: 56, nn, nnnn, /uploads/colTechImgTwo.jpg
+2024-08-12_22:53:53.697 - <==      Total: 1
+2024-08-12_22:54:46.477 - ==>  Preparing: UPDATE Post SET title = ?, content = ? WHERE id = ?;
+2024-08-12_22:54:46.478 - ==> Parameters: nn(String), sophisticated , glamorously spectacular car(String), 56(Integer)
+2024-08-12_22:54:46.516 - <==    Updates: 1
+2024-08-12_22:54:46.517 - Posts Updated Successfully : 56
+2024-08-12_22:54:46.526 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-12_22:54:46.526 - ==> Parameters: 
+2024-08-12_22:54:46.527 - <==    Columns: id, title, content, imgurl
+2024-08-12_22:54:46.527 - <==        Row: 55, kk, awesome car, /uploads/ludicrousImg.jpg
+2024-08-12_22:54:46.527 - <==        Row: 49, k, ijiih, /uploads/carImage3.jpg
+2024-08-12_22:54:46.527 - <==        Row: 50, m, m, /uploads/carImage4.jpg
+2024-08-12_22:54:46.528 - <==        Row: 56, nn, sophisticated , glamorously spectacular car, /uploads/colTechImgTwo.jpg

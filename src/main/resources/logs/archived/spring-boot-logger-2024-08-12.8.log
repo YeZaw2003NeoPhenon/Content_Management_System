@@ -1,0 +1,24 @@
+2024-08-12_22:29:49.606 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@40b9e13d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@a2d1c90, org.springframework.security.web.context.SecurityContextPersistenceFilter@55417d18, org.springframework.security.web.header.HeaderWriterFilter@5adaaa26, org.springframework.security.web.authentication.logout.LogoutFilter@570bcd27, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@77f71605, org.springframework.security.web.session.ConcurrentSessionFilter@5b49924b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@221f68de, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@59795a98, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@7fc6b301, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4c8bb8d2, org.springframework.security.web.session.SessionManagementFilter@47870125, org.springframework.security.web.access.ExceptionTranslationFilter@55e94728, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6cf75241]
+2024-08-12_22:29:50.356 - LiveReload server is running on port 35729
+2024-08-12_22:29:50.388 - Starting ProtocolHandler ["http-nio-8080"]
+2024-08-12_22:29:50.432 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-08-12_22:29:50.454 - Started ContentManagementSystemApplication in 5.591 seconds (JVM running for 6.604)
+2024-08-12_22:30:07.291 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-12_22:30:07.291 - Initializing Servlet 'dispatcherServlet'
+2024-08-12_22:30:07.293 - Completed initialization in 1 ms
+2024-08-12_22:30:07.359 - HikariPool-1 - Starting...
+2024-08-12_22:30:07.534 - HikariPool-1 - Start completed.
+2024-08-12_22:30:07.547 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?
+2024-08-12_22:30:07.576 - ==> Parameters: Neo(String)
+2024-08-12_22:30:07.601 - <==    Columns: username, password, enabled, authority
+2024-08-12_22:30:07.602 - <==        Row: Neo, $2a$12$TxOY073F7yTp0qTMxSn1qOLWOjzOtjn2Dc6LfteXId5qqLHqGn9vy, t, ADMIN
+2024-08-12_22:30:07.608 - <==      Total: 1
+2024-08-12_22:30:07.766 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-12_22:30:07.766 - ==> Parameters: 
+2024-08-12_22:30:07.771 - <==    Columns: id, title, content, imgurl
+2024-08-12_22:30:07.772 - <==        Row: 56, nn, nnnn, /uploads/colTechImgTwo.jpg
+2024-08-12_22:30:07.772 - <==        Row: 55, kk, awesome car, /uploads/ludicrousImg.jpg
+2024-08-12_22:30:07.773 - <==        Row: 49, k, ijiih, /uploads/carImage3.jpg
+2024-08-12_22:30:07.773 - <==        Row: 50, m, m, /uploads/Easy Tomato Cucumber Salad.jpg
+2024-08-12_22:30:07.774 - <==      Total: 4
+2024-08-12_22:30:07.775 - Scraching around the collections all posts

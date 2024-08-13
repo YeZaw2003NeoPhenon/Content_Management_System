@@ -1,0 +1,32 @@
+2024-08-12_23:40:19.806 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-12_23:40:19.809 - Initializing Servlet 'dispatcherServlet'
+2024-08-12_23:40:19.814 - Completed initialization in 5 ms
+2024-08-12_23:40:19.897 - HikariPool-1 - Starting...
+2024-08-12_23:40:20.083 - HikariPool-1 - Start completed.
+2024-08-12_23:40:20.095 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?
+2024-08-12_23:40:20.114 - ==> Parameters: Neo(String)
+2024-08-12_23:40:20.178 - <==    Columns: username, password, enabled, authority
+2024-08-12_23:40:20.178 - <==        Row: Neo, $2a$12$TxOY073F7yTp0qTMxSn1qOLWOjzOtjn2Dc6LfteXId5qqLHqGn9vy, t, ADMIN
+2024-08-12_23:40:20.181 - <==      Total: 1
+2024-08-12_23:40:20.330 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-12_23:40:20.330 - ==> Parameters: 
+2024-08-12_23:40:20.333 - <==    Columns: id, title, content, imgurl
+2024-08-12_23:40:20.333 - <==        Row: 58, Lets cheer on for majestic compensation and drink ultil extorionate, ff........., /uploads/fauana.jpg
+2024-08-12_23:40:20.334 - <==        Row: 49, k, ijiih, /uploads/mainFoodColImg1.jpg
+2024-08-12_23:40:20.334 - <==        Row: 55, kk, awesome car, /uploads/mainFoodColImg2.jpg
+2024-08-12_23:40:20.335 - <==        Row: 56, nn, sophisticated , glamorously spectacular blog post, /uploads/mainFoodColImg3.jpg
+2024-08-12_23:40:20.335 - <==        Row: 59, mm, mm, /uploads/techImgFour.jpg
+2024-08-12_23:40:20.337 - <==      Total: 5
+2024-08-12_23:40:20.339 - Scraching around the collections all posts
+2024-08-12_23:44:05.281 - Starting ContentManagementSystemApplication using Java 1.8.0_202 on DESKTOP-0FGFVV5 with PID 6336 (C:\Users\Acer\Desktop\Content_Management_System\target\classes started by Acer in C:\Users\Acer\Desktop\Content_Management_System)
+2024-08-12_23:44:05.283 - Running with Spring Boot v2.7.17, Spring v5.3.30
+2024-08-12_23:44:05.284 - No active profile set, falling back to 1 default profile: "default"
+2024-08-12_23:44:05.359 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-12_23:44:05.359 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-12_23:44:07.895 - Tomcat initialized with port(s): 8080 (http)
+2024-08-12_23:44:07.909 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-12_23:44:07.914 - Starting service [Tomcat]
+2024-08-12_23:44:07.914 - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-08-12_23:44:08.047 - Initializing Spring embedded WebApplicationContext
+2024-08-12_23:44:08.049 - Root WebApplicationContext: initialization completed in 2689 ms
+2024-08-12_23:44:09.031 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4a782a67, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@47aa7f84, org.springframework.security.web.context.SecurityContextPersistenceFilter@4ae062d3, org.springframework.security.web.header.HeaderWriterFilter@34720847, org.springframework.security.web.authentication.logout.LogoutFilter@2b74e429, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7119eea4, org.springframework.security.web.session.ConcurrentSessionFilter@7e42c558, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@21f17914, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1ca6638b, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@1a02ebbf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@61080116, org.springframework.security.web.session.SessionManagementFilter@40462f51, org.springframework.security.web.access.ExceptionTranslationFilter@1dcaead5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@bdeead]

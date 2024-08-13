@@ -6,33 +6,48 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 
+import javax.servlet.ServletContext;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
-
-import jakarta.servlet.ServletContext;
+import org.thymeleaf.standard.processor.StandardInliningCDATASectionProcessor;
 
 @Component
-public class multiPartFileHandler {
+public class multiPartFileHandler implements fileHandlerService{
 	
 	@Autowired
-	 private ServletContext servletContext;
+	private ServletContext servletContext;
 	
+	private Logger LOGGER = LoggerFactory.getLogger(multiPartFileHandler.class);
+	
+	@Override
 	public String saveFile(MultipartFile multipartFile) {
-			  String Upload_Dir = servletContext.getRealPath("/uploads/");
+
 			  String filename = multipartFile.getOriginalFilename();
-			  Path uploadPath = Paths.get(Upload_Dir);
+			 String upload_Dir = servletContext.getRealPath("/uploads/");
+			Path uploadPath =  Paths.get(upload_Dir);
 			 try {
+			 
 			  if( !Files.exists(uploadPath) ) {
 				  
 				Files.createDirectories(uploadPath);
+				LOGGER.debug("Created directories for upload path: {}",upload_Dir);
 				}
 			  Path filePath = uploadPath.resolve(filename);
-		      Files.copy(multipartFile.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
+		      Files.copy(multipartFile.getInputStream() , filePath, StandardCopyOption.REPLACE_EXISTING);
+		      
+				LOGGER.debug("Attempting to save file: {}", filename);
+				LOGGER.debug("Upload directory: {}", upload_Dir);
+				LOGGER.debug("Final file path: {}", filePath.toString());
+				
+		      LOGGER.info("File saved successfully: {}", filename);
 		      return "/uploads/" + filename;
 			  }
 			 catch (IOException e) {
-					
+				 LOGGER.error("Failed to save file: {}",filename , e );
 					e.printStackTrace();
 					return null;
 				}

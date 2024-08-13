@@ -1,7 +1,6 @@
 package com.example.Content_Management_System.model;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 public class Post {

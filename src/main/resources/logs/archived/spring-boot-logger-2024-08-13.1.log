@@ -1,0 +1,38 @@
+2024-08-13_22:43:56.584 - <==    Columns: username, password, enabled, authority
+2024-08-13_22:43:56.589 - <==        Row: Neo, $2a$12$TxOY073F7yTp0qTMxSn1qOLWOjzOtjn2Dc6LfteXId5qqLHqGn9vy, t, ADMIN
+2024-08-13_22:43:56.597 - <==      Total: 1
+2024-08-13_22:43:56.872 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-13_22:43:56.878 - ==> Parameters: 
+2024-08-13_22:43:56.893 - <==    Columns: id, title, content, imgurl
+2024-08-13_22:43:56.894 - <==        Row: 58, Lets cheer on for majestic compensation and drink ultil extorionate, ff........., /uploads/fauana.jpg
+2024-08-13_22:43:56.897 - <==        Row: 49, k, ijiih, /uploads/mainFoodColImg1.jpg
+2024-08-13_22:43:56.897 - <==        Row: 55, kk, awesome car, /uploads/mainFoodColImg2.jpg
+2024-08-13_22:43:56.899 - <==        Row: 56, nn, sophisticated , glamorously spectacular blog post, /uploads/mainFoodColImg3.jpg
+2024-08-13_22:43:56.899 - <==        Row: 59, mm, mm, /uploads/techImgFour.jpg
+2024-08-13_22:43:56.901 - <==      Total: 5
+2024-08-13_22:43:56.904 - Scraching around the collections all posts
+2024-08-13_22:44:05.283 - ==>  Preparing: SELECT id, title, content, imgURL FROM Post WHERE id = ?
+2024-08-13_22:44:05.288 - ==> Parameters: 55(Integer)
+2024-08-13_22:44:05.291 - <==    Columns: id, title, content, imgurl
+2024-08-13_22:44:05.291 - <==        Row: 55, kk, awesome car, /uploads/mainFoodColImg2.jpg
+2024-08-13_22:44:05.292 - <==      Total: 1
+2024-08-13_22:44:07.192 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-13_22:44:07.194 - ==> Parameters: 
+2024-08-13_22:44:07.196 - <==    Columns: id, title, content, imgurl
+2024-08-13_22:44:07.197 - <==        Row: 58, Lets cheer on for majestic compensation and drink ultil extorionate, ff........., /uploads/fauana.jpg
+2024-08-13_22:44:07.199 - <==        Row: 49, k, ijiih, /uploads/mainFoodColImg1.jpg
+2024-08-13_22:44:07.200 - <==        Row: 55, kk, awesome car, /uploads/mainFoodColImg2.jpg
+2024-08-13_22:44:07.202 - <==        Row: 56, nn, sophisticated , glamorously spectacular blog post, /uploads/mainFoodColImg3.jpg
+2024-08-13_22:44:07.204 - <==        Row: 59, mm, mm, /uploads/techImgFour.jpg
+2024-08-13_22:44:07.207 - <==      Total: 5
+2024-08-13_22:44:07.208 - Scraching around the collections all posts
+2024-08-13_22:44:17.202 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-13_22:44:17.203 - ==> Parameters: 
+2024-08-13_22:44:17.205 - <==    Columns: id, title, content, imgurl
+2024-08-13_22:44:17.206 - <==        Row: 58, Lets cheer on for majestic compensation and drink ultil extorionate, ff........., /uploads/fauana.jpg
+2024-08-13_22:44:17.207 - <==        Row: 49, k, ijiih, /uploads/mainFoodColImg1.jpg
+2024-08-13_22:44:17.208 - <==        Row: 55, kk, awesome car, /uploads/mainFoodColImg2.jpg
+2024-08-13_22:44:17.209 - <==        Row: 56, nn, sophisticated , glamorously spectacular blog post, /uploads/mainFoodColImg3.jpg
+2024-08-13_22:44:17.209 - <==        Row: 59, mm, mm, /uploads/techImgFour.jpg
+2024-08-13_22:44:17.212 - <==      Total: 5
+2024-08-13_22:44:17.213 - Scraching around the collections all posts

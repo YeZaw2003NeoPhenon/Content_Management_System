@@ -1,0 +1,35 @@
+2024-08-12_22:55:33.871 - LiveReload server is running on port 35729
+2024-08-12_22:55:33.919 - Starting ProtocolHandler ["http-nio-8080"]
+2024-08-12_22:55:33.976 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-08-12_22:55:34.000 - Started ContentManagementSystemApplication in 6.795 seconds (JVM running for 7.738)
+2024-08-12_22:55:43.533 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-12_22:55:43.534 - Initializing Servlet 'dispatcherServlet'
+2024-08-12_22:55:43.537 - Completed initialization in 3 ms
+2024-08-12_22:55:43.627 - HikariPool-1 - Starting...
+2024-08-12_22:55:43.865 - HikariPool-1 - Start completed.
+2024-08-12_22:55:43.877 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?
+2024-08-12_22:55:43.903 - ==> Parameters: Neo(String)
+2024-08-12_22:55:43.930 - <==    Columns: username, password, enabled, authority
+2024-08-12_22:55:43.930 - <==        Row: Neo, $2a$12$TxOY073F7yTp0qTMxSn1qOLWOjzOtjn2Dc6LfteXId5qqLHqGn9vy, t, ADMIN
+2024-08-12_22:55:43.933 - <==      Total: 1
+2024-08-12_22:55:44.071 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-12_22:55:44.071 - ==> Parameters: 
+2024-08-12_22:55:44.075 - <==    Columns: id, title, content, imgurl
+2024-08-12_22:55:44.075 - <==        Row: 55, kk, awesome car, /uploads/ludicrousImg.jpg
+2024-08-12_22:55:44.075 - <==        Row: 49, k, ijiih, /uploads/carImage3.jpg
+2024-08-12_22:55:44.076 - <==        Row: 50, m, m, /uploads/carImage4.jpg
+2024-08-12_22:55:44.076 - <==        Row: 56, nn, sophisticated , glamorously spectacular blog post, /uploads/restaurntChiefImg.jpg
+2024-08-12_22:55:44.077 - <==      Total: 4
+2024-08-12_22:55:44.079 - Scraching around the collections all posts
+2024-08-12_23:01:00.840 - Starting ContentManagementSystemApplication using Java 1.8.0_202 on DESKTOP-0FGFVV5 with PID 10320 (C:\Users\Acer\Desktop\Content_Management_System\target\classes started by Acer in C:\Users\Acer\Desktop\Content_Management_System)
+2024-08-12_23:01:00.843 - Running with Spring Boot v2.7.17, Spring v5.3.30
+2024-08-12_23:01:00.845 - No active profile set, falling back to 1 default profile: "default"
+2024-08-12_23:01:00.956 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-12_23:01:00.957 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-12_23:01:03.871 - Tomcat initialized with port(s): 8080 (http)
+2024-08-12_23:01:03.885 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-12_23:01:03.889 - Starting service [Tomcat]
+2024-08-12_23:01:03.890 - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-08-12_23:01:04.040 - Initializing Spring embedded WebApplicationContext
+2024-08-12_23:01:04.041 - Root WebApplicationContext: initialization completed in 3083 ms
+2024-08-12_23:01:05.159 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5a7ef576, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7119eea4, org.springframework.security.web.context.SecurityContextPersistenceFilter@4576d7e7, org.springframework.security.web.header.HeaderWriterFilter@17f0c855, org.springframework.security.web.authentication.logout.LogoutFilter@3d1455e7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@bdeead, org.springframework.security.web.session.ConcurrentSessionFilter@a90e094, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@68cbdc5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@107c7b22, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@7d6ac4d1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@f80aaed, org.springframework.security.web.session.SessionManagementFilter@6b3e660f, org.springframework.security.web.access.ExceptionTranslationFilter@7381674c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6f9dedff]

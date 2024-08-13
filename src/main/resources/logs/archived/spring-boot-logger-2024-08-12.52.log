@@ -1,0 +1,21 @@
+2024-08-12_23:36:24.173 - <==        Row: 55, kk, awesome car, /uploads/mainFoodColImg2.jpg
+2024-08-12_23:36:24.176 - <==        Row: 56, nn, sophisticated , glamorously spectacular blog post, /uploads/mainFoodColImg3.jpg
+2024-08-12_23:36:24.177 - <==        Row: 59, mm, mm, /uploads/techImgFour.jpg
+2024-08-12_23:36:24.177 - <==      Total: 5
+2024-08-12_23:36:24.179 - Scraching around the collections all posts
+2024-08-12_23:40:01.821 - Starting ContentManagementSystemApplication using Java 1.8.0_202 on DESKTOP-0FGFVV5 with PID 12436 (C:\Users\Acer\Desktop\Content_Management_System\target\classes started by Acer in C:\Users\Acer\Desktop\Content_Management_System)
+2024-08-12_23:40:01.860 - Running with Spring Boot v2.7.17, Spring v5.3.30
+2024-08-12_23:40:01.862 - No active profile set, falling back to 1 default profile: "default"
+2024-08-12_23:40:01.953 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-12_23:40:01.954 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-12_23:40:05.061 - Tomcat initialized with port(s): 8080 (http)
+2024-08-12_23:40:05.079 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-12_23:40:05.086 - Starting service [Tomcat]
+2024-08-12_23:40:05.087 - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-08-12_23:40:05.220 - Initializing Spring embedded WebApplicationContext
+2024-08-12_23:40:05.221 - Root WebApplicationContext: initialization completed in 3266 ms
+2024-08-12_23:40:06.189 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3261546a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5a7ef576, org.springframework.security.web.context.SecurityContextPersistenceFilter@7a73eb85, org.springframework.security.web.header.HeaderWriterFilter@8351e6, org.springframework.security.web.authentication.logout.LogoutFilter@68d2ead2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3f361403, org.springframework.security.web.session.ConcurrentSessionFilter@34720847, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7e42c558, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@63c65152, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@72734090, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7119eea4, org.springframework.security.web.session.SessionManagementFilter@13fdd83b, org.springframework.security.web.access.ExceptionTranslationFilter@e11531b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@153ab13]
+2024-08-12_23:40:06.864 - LiveReload server is running on port 35729
+2024-08-12_23:40:06.891 - Starting ProtocolHandler ["http-nio-8080"]
+2024-08-12_23:40:06.929 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-08-12_23:40:06.951 - Started ContentManagementSystemApplication in 6.038 seconds (JVM running for 6.831)

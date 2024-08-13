@@ -1,0 +1,42 @@
+2024-08-12_22:10:40.600 - ==> Parameters: 
+2024-08-12_22:10:40.604 - <==    Columns: id, title, content, imgurl
+2024-08-12_22:10:40.604 - <==        Row: 56, nn, nnnn, /uploads/colTechImgTwo.jpg
+2024-08-12_22:10:40.605 - <==        Row: 55, kk, awesome car, /uploads/ludicrousImg.jpg
+2024-08-12_22:10:40.605 - <==        Row: 49, k, ijiih, /uploads/carImage3.jpg
+2024-08-12_22:10:40.605 - <==        Row: 57, daily affirmation and concentration , try to zero on into new still at least 1 hr a day 
+try to jerk off to sustainably laboriously keep track of virtuous proteins levels in your body
+( no porn ), /uploads/colTechImgOne.jpg
+2024-08-12_22:10:40.606 - <==        Row: 50, m, m, /uploads/Easy Tomato Cucumber Salad.jpg
+2024-08-12_22:10:40.607 - <==      Total: 5
+2024-08-12_22:10:40.607 - Scraching around the collections all posts
+2024-08-12_22:10:47.776 - ==>  Preparing: DELETE FROM Post WHERE id = ?;
+2024-08-12_22:10:47.777 - ==> Parameters: 57(Integer)
+2024-08-12_22:10:47.779 - <==    Updates: 1
+2024-08-12_22:10:47.779 - Post Deleted Successfully : 57
+2024-08-12_22:10:47.789 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-12_22:10:47.790 - ==> Parameters: 
+2024-08-12_22:10:47.791 - <==    Columns: id, title, content, imgurl
+2024-08-12_22:10:47.792 - <==        Row: 56, nn, nnnn, /uploads/colTechImgTwo.jpg
+2024-08-12_22:10:47.793 - <==        Row: 55, kk, awesome car, /uploads/ludicrousImg.jpg
+2024-08-12_22:10:47.793 - <==        Row: 49, k, ijiih, /uploads/carImage3.jpg
+2024-08-12_22:10:47.793 - <==        Row: 50, m, m, /uploads/Easy Tomato Cucumber Salad.jpg
+2024-08-12_22:10:47.793 - <==      Total: 4
+2024-08-12_22:10:47.794 - Scraching around the collections all posts
+2024-08-12_22:11:02.146 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-12_22:11:02.147 - ==> Parameters: 
+2024-08-12_22:11:02.148 - <==    Columns: id, title, content, imgurl
+2024-08-12_22:11:02.148 - <==        Row: 56, nn, nnnn, /uploads/colTechImgTwo.jpg
+2024-08-12_22:11:02.149 - <==        Row: 55, kk, awesome car, /uploads/ludicrousImg.jpg
+2024-08-12_22:11:02.149 - <==        Row: 49, k, ijiih, /uploads/carImage3.jpg
+2024-08-12_22:11:02.149 - <==        Row: 50, m, m, /uploads/Easy Tomato Cucumber Salad.jpg
+2024-08-12_22:11:02.150 - <==      Total: 4
+2024-08-12_22:11:02.150 - Scraching around the collections all posts
+2024-08-12_22:11:11.394 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?
+2024-08-12_22:11:11.395 - ==> Parameters: Neo(String)
+2024-08-12_22:11:11.397 - <==    Columns: username, password, enabled, authority
+2024-08-12_22:11:11.397 - <==        Row: Neo, $2a$12$TxOY073F7yTp0qTMxSn1qOLWOjzOtjn2Dc6LfteXId5qqLHqGn9vy, t, ADMIN
+2024-08-12_22:11:11.397 - <==      Total: 1
+2024-08-12_22:11:11.732 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?
+2024-08-12_22:11:11.733 - ==> Parameters: Neo(String)
+2024-08-12_22:11:11.735 - <==    Columns: username, password, enabled, authority
+2024-08-12_22:11:11.735 - <==        Row: Neo, $2a$12$TxOY073F7yTp0qTMxSn1qOLWOjzOtjn2Dc6LfteXId5qqLHqGn9vy, t, ADMIN

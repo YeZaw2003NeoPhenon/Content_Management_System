@@ -1,0 +1,22 @@
+2024-08-13_23:23:44.651 - Tomcat initialized with port(s): 8080 (http)
+2024-08-13_23:23:44.676 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-13_23:23:44.680 - Starting service [Tomcat]
+2024-08-13_23:23:44.681 - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-08-13_23:23:44.792 - Initializing Spring embedded WebApplicationContext
+2024-08-13_23:23:44.793 - Root WebApplicationContext: initialization completed in 2682 ms
+2024-08-13_23:23:45.890 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@e37e11d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2b73a1c2, org.springframework.security.web.context.SecurityContextPersistenceFilter@770ae5ac, org.springframework.security.web.header.HeaderWriterFilter@69c6f659, org.springframework.security.web.authentication.logout.LogoutFilter@1e7ec63e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@63d0fb2e, org.springframework.security.web.session.ConcurrentSessionFilter@62228b1a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@600fdc5d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@41bdd3db, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@224f8a9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6c515ce, org.springframework.security.web.session.SessionManagementFilter@56bdf30a, org.springframework.security.web.access.ExceptionTranslationFilter@abb53ee, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@67adc0ea]
+2024-08-13_23:23:46.697 - LiveReload server is running on port 35729
+2024-08-13_23:23:46.726 - Starting ProtocolHandler ["http-nio-8080"]
+2024-08-13_23:23:46.773 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-08-13_23:23:46.797 - Started ContentManagementSystemApplication in 5.736 seconds (JVM running for 6.515)
+2024-08-13_23:24:07.486 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-13_23:24:07.487 - Initializing Servlet 'dispatcherServlet'
+2024-08-13_23:24:07.489 - Completed initialization in 2 ms
+2024-08-13_23:24:14.585 - HikariPool-1 - Starting...
+2024-08-13_23:24:14.773 - HikariPool-1 - Start completed.
+2024-08-13_23:24:14.783 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?
+2024-08-13_23:24:14.800 - ==> Parameters: Neo(String)
+2024-08-13_23:24:14.826 - <==    Columns: username, password, enabled, authority
+2024-08-13_23:24:14.826 - <==        Row: Neo, $2a$12$TxOY073F7yTp0qTMxSn1qOLWOjzOtjn2Dc6LfteXId5qqLHqGn9vy, t, ADMIN
+2024-08-13_23:24:14.829 - <==      Total: 1
+2024-08-13_23:24:15.194 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?

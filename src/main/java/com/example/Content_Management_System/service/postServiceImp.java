@@ -1,6 +1,7 @@
 package com.example.Content_Management_System.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,7 +27,7 @@ public class postServiceImp implements PostService{
 	}
 
 	@Override
-	public Post getPostById(int id) {
+	public Optional<Post> getPostById(int id) {
 		
 		return postMapper.getPostById(id);
 	}

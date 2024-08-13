@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Access Denied</title>
+    <link rel="stylesheet" href="/css/error.css"> <!-- Include your CSS stylesheet -->
+</head>
+<body>
+    <div class="container">
+        <h1>Access Denied</h1>
+        <p th:text="${errorMessage}">You do not have permission to access this page.</p>
+        <a href="/posts">Back to Posts</a>
+    </div>
+</body>
+</html>

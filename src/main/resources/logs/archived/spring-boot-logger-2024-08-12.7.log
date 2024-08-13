@@ -1,0 +1,34 @@
+2024-08-12_22:29:00.147 - <==        Row: 49, k, ijiih, /uploads/carImage3.jpg
+2024-08-12_22:29:00.181 - <==        Row: 50, m, m, /uploads/Easy Tomato Cucumber Salad.jpg
+2024-08-12_22:29:00.182 - <==      Total: 4
+2024-08-12_22:29:00.185 - Scraching around the collections all posts
+2024-08-12_22:29:15.162 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?
+2024-08-12_22:29:15.163 - ==> Parameters: Neo(String)
+2024-08-12_22:29:15.164 - <==    Columns: username, password, enabled, authority
+2024-08-12_22:29:15.165 - <==        Row: Neo, $2a$12$TxOY073F7yTp0qTMxSn1qOLWOjzOtjn2Dc6LfteXId5qqLHqGn9vy, t, ADMIN
+2024-08-12_22:29:15.165 - <==      Total: 1
+2024-08-12_22:29:15.509 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?
+2024-08-12_22:29:15.509 - ==> Parameters: Neo(String)
+2024-08-12_22:29:15.510 - <==    Columns: username, password, enabled, authority
+2024-08-12_22:29:15.510 - <==        Row: Neo, $2a$12$TxOY073F7yTp0qTMxSn1qOLWOjzOtjn2Dc6LfteXId5qqLHqGn9vy, t, ADMIN
+2024-08-12_22:29:15.510 - <==      Total: 1
+2024-08-12_22:29:15.521 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-12_22:29:15.522 - ==> Parameters: 
+2024-08-12_22:29:15.524 - <==    Columns: id, title, content, imgurl
+2024-08-12_22:29:15.525 - <==        Row: 56, nn, nnnn, /uploads/colTechImgTwo.jpg
+2024-08-12_22:29:15.525 - <==        Row: 55, kk, awesome car, /uploads/ludicrousImg.jpg
+2024-08-12_22:29:15.525 - <==        Row: 49, k, ijiih, /uploads/carImage3.jpg
+2024-08-12_22:29:15.526 - <==        Row: 50, m, m, /uploads/Easy Tomato Cucumber Salad.jpg
+2024-08-12_22:29:15.527 - <==      Total: 4
+2024-08-12_22:29:15.527 - Scraching around the collections all posts
+2024-08-12_22:29:45.688 - Starting ContentManagementSystemApplication using Java 1.8.0_202 on DESKTOP-0FGFVV5 with PID 6436 (C:\Users\Acer\Desktop\Content_Management_System\target\classes started by Acer in C:\Users\Acer\Desktop\Content_Management_System)
+2024-08-12_22:29:45.690 - Running with Spring Boot v2.7.17, Spring v5.3.30
+2024-08-12_22:29:45.692 - No active profile set, falling back to 1 default profile: "default"
+2024-08-12_22:29:45.813 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-12_22:29:45.814 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-12_22:29:48.414 - Tomcat initialized with port(s): 8080 (http)
+2024-08-12_22:29:48.432 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-12_22:29:48.439 - Starting service [Tomcat]
+2024-08-12_22:29:48.440 - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-08-12_22:29:48.596 - Initializing Spring embedded WebApplicationContext
+2024-08-12_22:29:48.597 - Root WebApplicationContext: initialization completed in 2781 ms

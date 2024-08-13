@@ -1,0 +1,24 @@
+2024-08-12_23:44:09.922 - LiveReload server is running on port 35729
+2024-08-12_23:44:09.999 - Starting ProtocolHandler ["http-nio-8080"]
+2024-08-12_23:44:10.068 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-08-12_23:44:10.104 - Started ContentManagementSystemApplication in 5.535 seconds (JVM running for 6.262)
+2024-08-12_23:44:16.060 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-12_23:44:16.061 - Initializing Servlet 'dispatcherServlet'
+2024-08-12_23:44:16.064 - Completed initialization in 2 ms
+2024-08-12_23:44:16.133 - HikariPool-1 - Starting...
+2024-08-12_23:44:16.309 - HikariPool-1 - Start completed.
+2024-08-12_23:44:16.321 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?
+2024-08-12_23:44:16.340 - ==> Parameters: Neo(String)
+2024-08-12_23:44:16.368 - <==    Columns: username, password, enabled, authority
+2024-08-12_23:44:16.413 - <==        Row: Neo, $2a$12$TxOY073F7yTp0qTMxSn1qOLWOjzOtjn2Dc6LfteXId5qqLHqGn9vy, t, ADMIN
+2024-08-12_23:44:16.418 - <==      Total: 1
+2024-08-12_23:44:16.591 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-12_23:44:16.591 - ==> Parameters: 
+2024-08-12_23:44:16.593 - <==    Columns: id, title, content, imgurl
+2024-08-12_23:44:16.594 - <==        Row: 58, Lets cheer on for majestic compensation and drink ultil extorionate, ff........., /uploads/fauana.jpg
+2024-08-12_23:44:16.594 - <==        Row: 49, k, ijiih, /uploads/mainFoodColImg1.jpg
+2024-08-12_23:44:16.595 - <==        Row: 55, kk, awesome car, /uploads/mainFoodColImg2.jpg
+2024-08-12_23:44:16.595 - <==        Row: 56, nn, sophisticated , glamorously spectacular blog post, /uploads/mainFoodColImg3.jpg
+2024-08-12_23:44:16.595 - <==        Row: 59, mm, mm, /uploads/techImgFour.jpg
+2024-08-12_23:44:16.596 - <==      Total: 5
+2024-08-12_23:44:16.597 - Scraching around the collections all posts

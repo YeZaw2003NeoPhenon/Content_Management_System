@@ -1,0 +1,36 @@
+2024-08-13_23:24:15.195 - ==> Parameters: Neo(String)
+2024-08-13_23:24:15.202 - <==    Columns: username, password, enabled, authority
+2024-08-13_23:24:15.203 - <==        Row: Neo, $2a$12$TxOY073F7yTp0qTMxSn1qOLWOjzOtjn2Dc6LfteXId5qqLHqGn9vy, t, ADMIN
+2024-08-13_23:24:15.203 - <==      Total: 1
+2024-08-13_23:24:15.303 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-13_23:24:15.305 - ==> Parameters: 
+2024-08-13_23:24:15.308 - <==    Columns: id, title, content, imgurl
+2024-08-13_23:24:15.308 - <==        Row: 58, Lets cheer on for majestic compensation and drink ultil extorionate, ff........., /uploads/fauana.jpg
+2024-08-13_23:24:15.347 - <==        Row: 49, k, ijiih, /uploads/mainFoodColImg1.jpg
+2024-08-13_23:24:15.348 - <==        Row: 55, kk, awesome car, /uploads/mainFoodColImg2.jpg
+2024-08-13_23:24:15.348 - <==        Row: 56, nn, sophisticated , glamorously spectacular blog post, /uploads/mainFoodColImg3.jpg
+2024-08-13_23:24:15.349 - <==        Row: 59, mm, mm, /uploads/techImgFour.jpg
+2024-08-13_23:24:15.349 - <==        Row: 60, try to Canada, canada is tranquil city precariously brimming with people and some majestic tourist attraction places.., /uploads/colTechImgOne.jpg
+2024-08-13_23:24:15.350 - <==      Total: 6
+2024-08-13_23:24:15.351 - Scraching around the collections all posts
+2024-08-13_23:24:20.196 - ==>  Preparing: SELECT id, title, content, imgURL FROM Post WHERE id = ?
+2024-08-13_23:24:20.198 - ==> Parameters: 59(Integer)
+2024-08-13_23:24:20.237 - <==    Columns: id, title, content, imgurl
+2024-08-13_23:24:20.237 - <==        Row: 59, mm, mm, /uploads/techImgFour.jpg
+2024-08-13_23:24:20.237 - <==      Total: 1
+2024-08-13_23:24:20.238 - ==>  Preparing: DELETE FROM Post WHERE id = ?;
+2024-08-13_23:24:20.238 - ==> Parameters: 59(Integer)
+2024-08-13_23:24:20.245 - <==    Updates: 1
+2024-08-13_23:24:20.246 - Post Deleted Successfully : 59
+2024-08-13_23:24:20.282 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-13_23:24:20.284 - ==> Parameters: 
+2024-08-13_23:24:20.286 - <==    Columns: id, title, content, imgurl
+2024-08-13_23:24:20.287 - <==        Row: 58, Lets cheer on for majestic compensation and drink ultil extorionate, ff........., /uploads/fauana.jpg
+2024-08-13_23:24:20.287 - <==        Row: 49, k, ijiih, /uploads/mainFoodColImg1.jpg
+2024-08-13_23:24:20.288 - <==        Row: 55, kk, awesome car, /uploads/mainFoodColImg2.jpg
+2024-08-13_23:24:20.289 - <==        Row: 56, nn, sophisticated , glamorously spectacular blog post, /uploads/mainFoodColImg3.jpg
+2024-08-13_23:24:20.289 - <==        Row: 60, try to Canada, canada is tranquil city precariously brimming with people and some majestic tourist attraction places.., /uploads/colTechImgOne.jpg
+2024-08-13_23:24:20.289 - <==      Total: 5
+2024-08-13_23:24:20.289 - Scraching around the collections all posts
+2024-08-13_23:24:33.899 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?
+2024-08-13_23:24:33.900 - ==> Parameters: Neli(String)

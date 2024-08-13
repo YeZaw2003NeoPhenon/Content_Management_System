@@ -1,0 +1,32 @@
+2024-08-13_23:24:33.901 - <==      Total: 0
+2024-08-13_23:24:33.905 - User not found with username: Neli
+2024-08-13_23:24:34.008 - An unexpected error occurred: Request method 'POST' not supported
+2024-08-13_23:24:34.009 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2024-08-13_23:24:41.208 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?
+2024-08-13_23:24:41.234 - ==> Parameters: Neo(String)
+2024-08-13_23:24:41.236 - <==    Columns: username, password, enabled, authority
+2024-08-13_23:24:41.236 - <==        Row: Neo, $2a$12$TxOY073F7yTp0qTMxSn1qOLWOjzOtjn2Dc6LfteXId5qqLHqGn9vy, t, ADMIN
+2024-08-13_23:24:41.237 - <==      Total: 1
+2024-08-13_23:24:41.570 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?
+2024-08-13_23:24:41.570 - ==> Parameters: Neo(String)
+2024-08-13_23:24:41.571 - <==    Columns: username, password, enabled, authority
+2024-08-13_23:24:41.572 - <==        Row: Neo, $2a$12$TxOY073F7yTp0qTMxSn1qOLWOjzOtjn2Dc6LfteXId5qqLHqGn9vy, t, ADMIN
+2024-08-13_23:24:41.572 - <==      Total: 1
+2024-08-13_23:24:41.580 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-13_23:24:41.581 - ==> Parameters: 
+2024-08-13_23:24:41.582 - <==    Columns: id, title, content, imgurl
+2024-08-13_23:24:41.583 - <==        Row: 58, Lets cheer on for majestic compensation and drink ultil extorionate, ff........., /uploads/fauana.jpg
+2024-08-13_23:24:41.583 - <==        Row: 49, k, ijiih, /uploads/mainFoodColImg1.jpg
+2024-08-13_23:24:41.583 - <==        Row: 55, kk, awesome car, /uploads/mainFoodColImg2.jpg
+2024-08-13_23:24:41.583 - <==        Row: 56, nn, sophisticated , glamorously spectacular blog post, /uploads/mainFoodColImg3.jpg
+2024-08-13_23:24:41.586 - <==        Row: 60, try to Canada, canada is tranquil city precariously brimming with people and some majestic tourist attraction places.., /uploads/colTechImgOne.jpg
+2024-08-13_23:24:41.587 - <==      Total: 5
+2024-08-13_23:24:41.588 - Scraching around the collections all posts
+2024-08-13_23:24:47.542 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-13_23:24:47.542 - ==> Parameters: 
+2024-08-13_23:24:47.544 - <==    Columns: id, title, content, imgurl
+2024-08-13_23:24:47.544 - <==        Row: 58, Lets cheer on for majestic compensation and drink ultil extorionate, ff........., /uploads/fauana.jpg
+2024-08-13_23:24:47.545 - <==        Row: 49, k, ijiih, /uploads/mainFoodColImg1.jpg
+2024-08-13_23:24:47.545 - <==        Row: 55, kk, awesome car, /uploads/mainFoodColImg2.jpg
+2024-08-13_23:24:47.546 - <==        Row: 56, nn, sophisticated , glamorously spectacular blog post, /uploads/mainFoodColImg3.jpg
+2024-08-13_23:24:47.546 - <==        Row: 60, try to Canada, canada is tranquil city precariously brimming with people and some majestic tourist attraction places.., /uploads/colTechImgOne.jpg

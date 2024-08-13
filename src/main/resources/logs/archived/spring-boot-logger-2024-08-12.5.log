@@ -1,0 +1,105 @@
+2024-08-12_22:11:11.736 - <==      Total: 1
+2024-08-12_22:11:11.747 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-12_22:11:11.747 - ==> Parameters: 
+2024-08-12_22:11:11.748 - <==    Columns: id, title, content, imgurl
+2024-08-12_22:11:11.749 - <==        Row: 56, nn, nnnn, /uploads/colTechImgTwo.jpg
+2024-08-12_22:11:11.749 - <==        Row: 55, kk, awesome car, /uploads/ludicrousImg.jpg
+2024-08-12_22:11:11.749 - <==        Row: 49, k, ijiih, /uploads/carImage3.jpg
+2024-08-12_22:11:11.749 - <==        Row: 50, m, m, /uploads/Easy Tomato Cucumber Salad.jpg
+2024-08-12_22:11:11.786 - <==      Total: 4
+2024-08-12_22:11:11.787 - Scraching around the collections all posts
+2024-08-12_22:28:21.947 - Starting ContentManagementSystemApplication using Java 1.8.0_202 on DESKTOP-0FGFVV5 with PID 9696 (C:\Users\Acer\Desktop\Content_Management_System\target\classes started by Acer in C:\Users\Acer\Desktop\Content_Management_System)
+2024-08-12_22:28:21.951 - Running with Spring Boot v2.7.17, Spring v5.3.30
+2024-08-12_22:28:21.952 - No active profile set, falling back to 1 default profile: "default"
+2024-08-12_22:28:22.061 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-12_22:28:22.061 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-12_22:28:24.633 - Tomcat initialized with port(s): 8080 (http)
+2024-08-12_22:28:24.647 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-12_22:28:24.652 - Starting service [Tomcat]
+2024-08-12_22:28:24.652 - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-08-12_22:28:24.833 - Initializing Spring embedded WebApplicationContext
+2024-08-12_22:28:24.834 - Root WebApplicationContext: initialization completed in 2769 ms
+2024-08-12_22:28:25.744 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Unsatisfied dependency expressed through method 'setFilterChains' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'filterChain' defined in class path resource [com/example/Content_Management_System/config/webSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'filterChain' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The method successHandlers(new AuthenticationSuccessHandler(){}) is undefined for the type FormLoginConfigurer<HttpSecurity>
+
+2024-08-12_22:28:25.753 - Stopping service [Tomcat]
+2024-08-12_22:28:25.803 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-08-12_22:28:25.898 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Unsatisfied dependency expressed through method 'setFilterChains' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'filterChain' defined in class path resource [com/example/Content_Management_System/config/webSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'filterChain' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The method successHandlers(new AuthenticationSuccessHandler(){}) is undefined for the type FormLoginConfigurer<HttpSecurity>
+
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:824)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:777)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:408)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:921)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at com.example.Content_Management_System.ContentManagementSystemApplication.main(ContentManagementSystemApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'filterChain' defined in class path resource [com/example/Content_Management_System/config/webSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'filterChain' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The method successHandlers(new AuthenticationSuccessHandler(){}) is undefined for the type FormLoginConfigurer<HttpSecurity>
+
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1609)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1462)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1349)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:816)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'filterChain' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The method successHandlers(new AuthenticationSuccessHandler(){}) is undefined for the type FormLoginConfigurer<HttpSecurity>
+
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	... 41 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	The method successHandlers(new AuthenticationSuccessHandler(){}) is undefined for the type FormLoginConfigurer<HttpSecurity>
+
+	at com.example.Content_Management_System.config.webSecurityConfiguration.filterChain(webSecurityConfiguration.java:68)
+	at com.example.Content_Management_System.config.webSecurityConfiguration$$EnhancerBySpringCGLIB$$96d97069.CGLIB$filterChain$3(<generated>)
+	at com.example.Content_Management_System.config.webSecurityConfiguration$$EnhancerBySpringCGLIB$$96d97069$$FastClassBySpringCGLIB$$97abcd3.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.example.Content_Management_System.config.webSecurityConfiguration$$EnhancerBySpringCGLIB$$96d97069.filterChain(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 42 common frames omitted
+2024-08-12_22:28:48.874 - Starting ContentManagementSystemApplication using Java 1.8.0_202 on DESKTOP-0FGFVV5 with PID 13320 (C:\Users\Acer\Desktop\Content_Management_System\target\classes started by Acer in C:\Users\Acer\Desktop\Content_Management_System)
+2024-08-12_22:28:48.876 - Running with Spring Boot v2.7.17, Spring v5.3.30
+2024-08-12_22:28:48.877 - No active profile set, falling back to 1 default profile: "default"
+2024-08-12_22:28:48.989 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-12_22:28:48.990 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'

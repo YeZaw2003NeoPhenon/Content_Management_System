@@ -1,0 +1,12 @@
+2024-08-13_23:56:28.708 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?
+2024-08-13_23:56:28.713 - ==> Parameters: user(String)
+2024-08-13_23:56:28.719 - <==      Total: 0
+2024-08-13_23:56:28.719 - User not found with username: user
+2024-08-13_23:56:28.814 - An unexpected error occurred: Request method 'POST' not supported
+2024-08-13_23:56:28.814 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2024-08-13_23:56:33.025 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?
+2024-08-13_23:56:33.026 - ==> Parameters: (String)
+2024-08-13_23:56:33.027 - <==      Total: 0
+2024-08-13_23:56:33.028 - User not found with username: 
+2024-08-13_23:56:33.127 - An unexpected error occurred: Request method 'POST' not supported
+2024-08-13_23:56:33.128 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]

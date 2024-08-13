@@ -1,0 +1,24 @@
+2024-08-12_23:13:21.253 - Starting service [Tomcat]
+2024-08-12_23:13:21.258 - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-08-12_23:13:21.393 - Initializing Spring embedded WebApplicationContext
+2024-08-12_23:13:21.395 - Root WebApplicationContext: initialization completed in 2758 ms
+2024-08-12_23:13:22.574 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@402feddd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f905cec, org.springframework.security.web.context.SecurityContextPersistenceFilter@78e5ecc, org.springframework.security.web.header.HeaderWriterFilter@1abe1553, org.springframework.security.web.authentication.logout.LogoutFilter@62228b1a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7fc6b301, org.springframework.security.web.session.ConcurrentSessionFilter@69bdfb57, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@8950f60, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@241883f4, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@40b9e13d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2d3b0012, org.springframework.security.web.session.SessionManagementFilter@b84f0c9, org.springframework.security.web.access.ExceptionTranslationFilter@5848cd03, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6e48381d]
+2024-08-12_23:13:23.366 - LiveReload server is running on port 35729
+2024-08-12_23:13:23.394 - Starting ProtocolHandler ["http-nio-8080"]
+2024-08-12_23:13:23.436 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-08-12_23:13:23.476 - Started ContentManagementSystemApplication in 5.639 seconds (JVM running for 6.39)
+2024-08-12_23:13:31.489 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-12_23:13:31.490 - Initializing Servlet 'dispatcherServlet'
+2024-08-12_23:13:31.492 - Completed initialization in 2 ms
+2024-08-12_23:13:40.370 - HikariPool-1 - Starting...
+2024-08-12_23:13:40.549 - HikariPool-1 - Start completed.
+2024-08-12_23:13:40.561 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?
+2024-08-12_23:13:40.583 - ==> Parameters: Neo(String)
+2024-08-12_23:13:40.606 - <==    Columns: username, password, enabled, authority
+2024-08-12_23:13:40.607 - <==        Row: Neo, $2a$12$TxOY073F7yTp0qTMxSn1qOLWOjzOtjn2Dc6LfteXId5qqLHqGn9vy, t, ADMIN
+2024-08-12_23:13:40.610 - <==      Total: 1
+2024-08-12_23:13:40.991 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2024-08-12_23:13:46.369 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?
+2024-08-12_23:13:46.370 - ==> Parameters: Neo(String)
+2024-08-12_23:13:46.372 - <==    Columns: username, password, enabled, authority
+2024-08-12_23:13:46.373 - <==        Row: Neo, $2a$12$TxOY073F7yTp0qTMxSn1qOLWOjzOtjn2Dc6LfteXId5qqLHqGn9vy, t, ADMIN

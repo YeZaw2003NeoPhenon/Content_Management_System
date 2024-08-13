@@ -12,8 +12,9 @@
 			<result column="authority" property="authority"/>
  	</resultMap>
  	
- 	<select resultMap = "userDetailModelMapper" id = "loginProcess" parameterType = "String" >
+ 	<select resultMap = "userDetailModelMapper" id = "loginProcess" parameterType = "String">
  		SELECT users.username , users.password , users.enabled , authorities.authority FROM users
  		 INNER JOIN authorities ON users.username = authorities.username  WHERE users.username = #{username}
  	</select>
+ 	
  </mapper>

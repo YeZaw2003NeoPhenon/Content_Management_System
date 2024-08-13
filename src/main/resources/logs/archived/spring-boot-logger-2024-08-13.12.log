@@ -1,0 +1,32 @@
+2024-08-13_23:55:31.843 - <==        Row: 55, kk, awesome car, /uploads/mainFoodColImg2.jpg
+2024-08-13_23:55:31.847 - <==        Row: 56, nn, sophisticated , glamorously spectacular blog post, /uploads/mainFoodColImg3.jpg
+2024-08-13_23:55:31.847 - <==        Row: 60, try to Canada, canada is tranquil city precariously brimming with people and some majestic tourist attraction places.., /uploads/colTechImgOne.jpg
+2024-08-13_23:55:31.848 - <==      Total: 5
+2024-08-13_23:55:31.850 - Scraching around the collections all posts
+2024-08-13_23:56:05.062 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?
+2024-08-13_23:56:05.105 - ==> Parameters: Neo(String)
+2024-08-13_23:56:05.110 - <==    Columns: username, password, enabled, authority
+2024-08-13_23:56:05.110 - <==        Row: Neo, $2a$12$TxOY073F7yTp0qTMxSn1qOLWOjzOtjn2Dc6LfteXId5qqLHqGn9vy, t, ADMIN
+2024-08-13_23:56:05.111 - <==      Total: 1
+2024-08-13_23:56:05.467 - An unexpected error occurred: Request method 'POST' not supported
+2024-08-13_23:56:05.469 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2024-08-13_23:56:13.130 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?
+2024-08-13_23:56:13.131 - ==> Parameters: Neo(String)
+2024-08-13_23:56:13.132 - <==    Columns: username, password, enabled, authority
+2024-08-13_23:56:13.133 - <==        Row: Neo, $2a$12$TxOY073F7yTp0qTMxSn1qOLWOjzOtjn2Dc6LfteXId5qqLHqGn9vy, t, ADMIN
+2024-08-13_23:56:13.133 - <==      Total: 1
+2024-08-13_23:56:13.469 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?
+2024-08-13_23:56:13.469 - ==> Parameters: Neo(String)
+2024-08-13_23:56:13.470 - <==    Columns: username, password, enabled, authority
+2024-08-13_23:56:13.470 - <==        Row: Neo, $2a$12$TxOY073F7yTp0qTMxSn1qOLWOjzOtjn2Dc6LfteXId5qqLHqGn9vy, t, ADMIN
+2024-08-13_23:56:13.471 - <==      Total: 1
+2024-08-13_23:56:13.521 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-13_23:56:13.521 - ==> Parameters: 
+2024-08-13_23:56:13.522 - <==    Columns: id, title, content, imgurl
+2024-08-13_23:56:13.522 - <==        Row: 58, Lets cheer on for majestic compensation and drink ultil extorionate, ff........., /uploads/fauana.jpg
+2024-08-13_23:56:13.523 - <==        Row: 49, k, ijiih, /uploads/mainFoodColImg1.jpg
+2024-08-13_23:56:13.524 - <==        Row: 55, kk, awesome car, /uploads/mainFoodColImg2.jpg
+2024-08-13_23:56:13.524 - <==        Row: 56, nn, sophisticated , glamorously spectacular blog post, /uploads/mainFoodColImg3.jpg
+2024-08-13_23:56:13.525 - <==        Row: 60, try to Canada, canada is tranquil city precariously brimming with people and some majestic tourist attraction places.., /uploads/colTechImgOne.jpg
+2024-08-13_23:56:13.525 - <==      Total: 5
+2024-08-13_23:56:13.525 - Scraching around the collections all posts

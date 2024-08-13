@@ -11,11 +11,33 @@
         </resultMap>
         
         <select id = "getAllPosts" resultMap = "PostResultMap">
-         	SELECT id,title,content,imgURL FROM Post;
+         	SELECT id,title,content,imgURL FROM Post
+        <where>
+            <if test="title != null and title != ''">
+                AND title LIKE CONCAT('%', #{title}, '%')
+            </if>
+            <if test="content != null and content != ''">
+                AND content LIKE CONCAT('%', #{content}, '%')
+            </if>
+            <if test="imgURL != null and imgURL != ''">
+                AND imgURL LIKE CONCAT('%', #{imgURL}, '%')
+            </if>
+        </where>
+
         </select>
         
         <insert id = "postInsertion" parameterType = "Post" keyProperty = "id" useGeneratedKeys = "true">
-         	INSERT INTO Post ( title , content ,imgURL ) VALUES ( #{title} , #{content} , #{imgURL} );
+         	INSERT INTO Post 
+         	<trim prefix = "(" suffix = ")" suffixOverrides = ",">
+         		<if test="title != null">title,</if>
+            	<if test="content != null">content,</if>
+           		<if test="imgURL != null">imgURL,</if>
+         	</trim>
+         	<trim prefix = "VALUES (" suffix = ")" suffixOverrides = ",">
+        		<if test="title != null">#{title},</if>
+            	<if test="content != null">#{content},</if>
+           		<if test="imgURL != null">#{imgURL},</if> 		
+         	</trim>
         </insert>
        
         

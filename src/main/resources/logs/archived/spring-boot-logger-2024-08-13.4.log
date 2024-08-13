@@ -1,0 +1,35 @@
+2024-08-13_23:10:55.511 - LiveReload server is running on port 35729
+2024-08-13_23:10:55.556 - Starting ProtocolHandler ["http-nio-8080"]
+2024-08-13_23:10:55.607 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-08-13_23:10:55.662 - Started ContentManagementSystemApplication in 5.658 seconds (JVM running for 6.978)
+2024-08-13_23:11:01.749 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-13_23:11:01.750 - Initializing Servlet 'dispatcherServlet'
+2024-08-13_23:11:01.753 - Completed initialization in 2 ms
+2024-08-13_23:11:12.655 - HikariPool-1 - Starting...
+2024-08-13_23:11:12.919 - HikariPool-1 - Start completed.
+2024-08-13_23:11:12.935 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?
+2024-08-13_23:11:12.969 - ==> Parameters: NeoPhenon(String)
+2024-08-13_23:11:13.011 - <==    Columns: username, password, enabled, authority
+2024-08-13_23:11:13.017 - <==        Row: NeoPhenon, $2a$10$MnR6K/BMINcbfLOZfRJNJeOf/Av/M.9nDzb5o1FsIILApdd3.r.n., f, USER
+2024-08-13_23:11:13.020 - <==      Total: 1
+2024-08-13_23:11:13.069 - An unexpected error occurred: Request method 'POST' not supported
+2024-08-13_23:11:13.074 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2024-08-13_23:12:07.616 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?
+2024-08-13_23:12:07.616 - ==> Parameters: NeoPhenon(String)
+2024-08-13_23:12:07.619 - <==    Columns: username, password, enabled, authority
+2024-08-13_23:12:07.619 - <==        Row: NeoPhenon, $2a$10$MnR6K/BMINcbfLOZfRJNJeOf/Av/M.9nDzb5o1FsIILApdd3.r.n., f, USER
+2024-08-13_23:12:07.621 - <==      Total: 1
+2024-08-13_23:12:07.623 - An unexpected error occurred: Request method 'POST' not supported
+2024-08-13_23:12:07.623 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2024-08-13_23:12:17.650 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?
+2024-08-13_23:12:17.651 - ==> Parameters: Neo(String)
+2024-08-13_23:12:17.654 - <==    Columns: username, password, enabled, authority
+2024-08-13_23:12:17.654 - <==        Row: Neo, $2a$12$TxOY073F7yTp0qTMxSn1qOLWOjzOtjn2Dc6LfteXId5qqLHqGn9vy, t, ADMIN
+2024-08-13_23:12:17.655 - <==      Total: 1
+2024-08-13_23:12:17.993 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?
+2024-08-13_23:12:17.994 - ==> Parameters: Neo(String)
+2024-08-13_23:12:17.996 - <==    Columns: username, password, enabled, authority
+2024-08-13_23:12:17.996 - <==        Row: Neo, $2a$12$TxOY073F7yTp0qTMxSn1qOLWOjzOtjn2Dc6LfteXId5qqLHqGn9vy, t, ADMIN
+2024-08-13_23:12:17.996 - <==      Total: 1
+2024-08-13_23:12:18.080 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-13_23:12:18.081 - ==> Parameters: 

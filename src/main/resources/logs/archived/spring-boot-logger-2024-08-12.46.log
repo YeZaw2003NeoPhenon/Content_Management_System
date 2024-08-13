@@ -1,0 +1,24 @@
+2024-08-12_23:30:04.495 - Started ContentManagementSystemApplication in 6.069 seconds (JVM running for 7.169)
+2024-08-12_23:32:36.976 - Starting ContentManagementSystemApplication using Java 1.8.0_202 on DESKTOP-0FGFVV5 with PID 10076 (C:\Users\Acer\Desktop\Content_Management_System\target\classes started by Acer in C:\Users\Acer\Desktop\Content_Management_System)
+2024-08-12_23:32:36.978 - Running with Spring Boot v2.7.17, Spring v5.3.30
+2024-08-12_23:32:36.979 - No active profile set, falling back to 1 default profile: "default"
+2024-08-12_23:32:37.073 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-12_23:32:37.110 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-12_23:32:39.796 - Tomcat initialized with port(s): 8080 (http)
+2024-08-12_23:32:39.810 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-12_23:32:39.815 - Starting service [Tomcat]
+2024-08-12_23:32:39.816 - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-08-12_23:32:39.958 - Initializing Spring embedded WebApplicationContext
+2024-08-12_23:32:39.959 - Root WebApplicationContext: initialization completed in 2848 ms
+2024-08-12_23:32:41.158 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@77f71605, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@173ac756, org.springframework.security.web.context.SecurityContextPersistenceFilter@5b49924b, org.springframework.security.web.header.HeaderWriterFilter@adfd6d2, org.springframework.security.web.authentication.logout.LogoutFilter@5fb92270, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@19e10f1f, org.springframework.security.web.session.ConcurrentSessionFilter@47870125, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@297993f4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7ef1e7e1, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@387b1acf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@25e29cba, org.springframework.security.web.session.SessionManagementFilter@25075c20, org.springframework.security.web.access.ExceptionTranslationFilter@6c6a9e9e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1ef3f15a]
+2024-08-12_23:32:41.848 - LiveReload server is running on port 35729
+2024-08-12_23:32:41.872 - Starting ProtocolHandler ["http-nio-8080"]
+2024-08-12_23:32:41.911 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-08-12_23:32:41.934 - Started ContentManagementSystemApplication in 5.821 seconds (JVM running for 6.572)
+2024-08-12_23:33:06.822 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-12_23:33:06.823 - Initializing Servlet 'dispatcherServlet'
+2024-08-12_23:33:06.825 - Completed initialization in 2 ms
+2024-08-12_23:33:06.900 - HikariPool-1 - Starting...
+2024-08-12_23:33:07.234 - HikariPool-1 - Start completed.
+2024-08-12_23:33:07.244 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?
+2024-08-12_23:33:07.262 - ==> Parameters: Neo(String)

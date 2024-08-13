@@ -1,0 +1,39 @@
+2024-08-12_22:10:20.584 - <==      Total: 1
+2024-08-12_22:10:22.153 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-12_22:10:22.154 - ==> Parameters: 
+2024-08-12_22:10:22.156 - <==    Columns: id, title, content, imgurl
+2024-08-12_22:10:22.156 - <==        Row: 56, nn, nnnn, /uploads/colTechImgTwo.jpg
+2024-08-12_22:10:22.157 - <==        Row: 57, daily affirmation and concentration , try to zero on into new still at least 1 hr a day 
+try to jerk off to sustainably laboriously keep track of virtuous proteins levels in your body
+( no porn ), /uploads/Premium Vector _ App development illustration.jpg
+2024-08-12_22:10:22.158 - <==        Row: 55, kk, awesome car, /uploads/ludicrousImg.jpg
+2024-08-12_22:10:22.158 - <==        Row: 49, k, ijiih, /uploads/carImage3.jpg
+2024-08-12_22:10:22.158 - <==        Row: 50, m, m, /uploads/Easy Tomato Cucumber Salad.jpg
+2024-08-12_22:10:22.162 - <==      Total: 5
+2024-08-12_22:10:22.162 - Scraching around the collections all posts
+2024-08-12_22:10:24.541 - ==>  Preparing: SELECT id, title, content, imgURL FROM Post WHERE id = ?
+2024-08-12_22:10:24.542 - ==> Parameters: 57(Integer)
+2024-08-12_22:10:24.544 - <==    Columns: id, title, content, imgurl
+2024-08-12_22:10:24.544 - <==        Row: 57, daily affirmation and concentration , try to zero on into new still at least 1 hr a day 
+try to jerk off to sustainably laboriously keep track of virtuous proteins levels in your body
+( no porn ), /uploads/Premium Vector _ App development illustration.jpg
+2024-08-12_22:10:24.545 - <==      Total: 1
+2024-08-12_22:10:26.324 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-12_22:10:26.325 - ==> Parameters: 
+2024-08-12_22:10:26.327 - <==    Columns: id, title, content, imgurl
+2024-08-12_22:10:26.327 - <==        Row: 56, nn, nnnn, /uploads/colTechImgTwo.jpg
+2024-08-12_22:10:26.327 - <==        Row: 57, daily affirmation and concentration , try to zero on into new still at least 1 hr a day 
+try to jerk off to sustainably laboriously keep track of virtuous proteins levels in your body
+( no porn ), /uploads/Premium Vector _ App development illustration.jpg
+2024-08-12_22:10:26.327 - <==        Row: 55, kk, awesome car, /uploads/ludicrousImg.jpg
+2024-08-12_22:10:26.328 - <==        Row: 49, k, ijiih, /uploads/carImage3.jpg
+2024-08-12_22:10:26.328 - <==        Row: 50, m, m, /uploads/Easy Tomato Cucumber Salad.jpg
+2024-08-12_22:10:26.328 - <==      Total: 5
+2024-08-12_22:10:26.329 - Scraching around the collections all posts
+2024-08-12_22:10:29.763 - ==>  Preparing: SELECT id, title, content, imgURL FROM Post WHERE id = ?
+2024-08-12_22:10:29.763 - ==> Parameters: 57(Integer)
+2024-08-12_22:10:29.764 - <==    Columns: id, title, content, imgurl
+2024-08-12_22:10:29.765 - <==        Row: 57, daily affirmation and concentration , try to zero on into new still at least 1 hr a day 
+try to jerk off to sustainably laboriously keep track of virtuous proteins levels in your body
+( no porn ), /uploads/Premium Vector _ App development illustration.jpg
+2024-08-12_22:10:29.765 - <==      Total: 1

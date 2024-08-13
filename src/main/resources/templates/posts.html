@@ -3,10 +3,13 @@
 <head>
     <title>Posts</title>
     <meta name = "Author" content = "NeoCourney">
-    <meta name = "Description" content = "Avaricaciously Provocatie and appeling post container">
+    <meta name = "Description" content = "A collection of avaricaciously captivating and provocative blog posts that entice the mind and soul.">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" th:href="@{/css/posts.css}">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" th:href="@{/css/posts.css}">
+
 </head>
 <body>
 
@@ -26,7 +29,7 @@
         				<a class="nav-link btn-outline-primary rounded-pill fw-bold me-2" id="create-btn" role="button" th:href="@{/createNewPost}" sec:authorize="hasRole('ROLE_ADMIN')">Create New Post</a>
     				</li>
     				<li class="nav-item" sec:authorize="isAuthenticated()">
-        				<a class="nav-link logout-btn" role="button" aria-label="logout-btn" th:href="@{/logout}">Logout</a>
+        			     <a class="nav-link logout-btn" role="button" aria-label="logout-btn" data-bs-toggle="modal" data-bs-target="#logoutConfirmationModal">Logout</a>
     				</li>
 				</ul>
             </div>
@@ -60,20 +63,44 @@
         <div class="row">
             <div class="col-md-4 mb-4" th:each="post : ${posts}" >
                 <div class="card">
-                    <img th:src="${post.imgURL}" class="card-img-top" alt="Post Image">
+               <img th:src="${post.imgURL}" th:if="${post.imgURL != null}" class="card-img-top" alt="Post Image">
+				<img th:src="@{/images/default.png}" th:if="${post.imgURL == null}" class="card-img-top" alt="Default Image">
                     <div class="card-body">
                         <h5 class="card-title" th:text="${post.title}"></h5>
                         <p class="card-text" th:text="${post.content}"></p>
                     </div>
-                    <div class = "card-footer d-flex justify-content-between">
-                    		<a type = "button" class="btn btn-danger mb-3" data-bs-toggle="modal" th:data-bs-target="'#deleteModal' + ${post.id}" sec:authorize = "hasRole('ROLE_ADMIN')" >Delete Post</a>
-                    		<a type = "button" class = "btn btn-primary mb-3" th:href = "@{'/posts/edit/' + ${post.id}}" sec:authorize = "hasRole('ROLE_ADMIN')" >Edit Post</a>
-                    </div>
+                    	<div class="card-footer d-flex justify-content-between">
+    				<a type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" th:data-bs-target="'#deleteModal' + ${post.id}" sec:authorize="hasRole('ROLE_ADMIN')">
+       					 <i class="fas fa-trash-alt"></i> Delete Post
+    				</a>
+    				<a type="button" class="btn btn-primary mb-3" th:href="@{'/posts/edit/' + ${post.id}}" sec:authorize="hasRole('ROLE_ADMIN')">
+        				<i class="fas fa-edit"></i> Edit Post
+    				</a>
+				</div>
                 </div>
             </div>
         </div>
     </div>
     
+<div class="modal fade" id="logoutConfirmationModal" tabindex="-1" aria-labelledby="logoutConfirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="logoutConfirmationModalLabel">Confirm Logout</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to log out?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <a href="/logout" class="btn btn-danger">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
  <div th:each = "post : ${posts}">
   <div class="modal fade modal-fullscreen" th:id="'deleteModal' + ${post.id}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">

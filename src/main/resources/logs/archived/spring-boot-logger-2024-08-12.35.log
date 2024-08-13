@@ -1,0 +1,33 @@
+2024-08-12_23:13:05.062 - Failed to deleted temporary file used for part [imageFile]
+java.io.UncheckedIOException: Cannot delete C:\Users\Acer\AppData\Local\Temp\tomcat.8080.8599544806245404840\work\Tomcat\localhost\ROOT\upload_95e6d50d_5343_4bea_b337_2fc66623fc02_00000011.tmp
+	at org.apache.tomcat.util.http.fileupload.disk.DiskFileItem.delete(DiskFileItem.java:428)
+	at org.apache.catalina.core.ApplicationPart.delete(ApplicationPart.java:53)
+	at org.apache.catalina.connector.Request.recycle(Request.java:475)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:420)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Cannot delete C:\Users\Acer\AppData\Local\Temp\tomcat.8080.8599544806245404840\work\Tomcat\localhost\ROOT\upload_95e6d50d_5343_4bea_b337_2fc66623fc02_00000011.tmp
+	... 13 common frames omitted
+2024-08-12_23:13:05.071 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-12_23:13:05.072 - ==> Parameters: 
+2024-08-12_23:13:05.073 - <==    Columns: id, title, content, imgurl
+2024-08-12_23:13:05.074 - <==        Row: 58, Lets cheer on for majestic compensation and drink ultil extorionate, ff........., /uploads/fauana.jpg
+2024-08-12_23:13:05.077 - <==        Row: 49, k, ijiih, /uploads/mainFoodColImg1.jpg
+2024-08-12_23:13:05.078 - <==        Row: 55, kk, awesome car, /uploads/mainFoodColImg2.jpg
+2024-08-12_23:13:05.079 - <==        Row: 56, nn, sophisticated , glamorously spectacular blog post, /uploads/mainFoodColImg3.jpg
+2024-08-12_23:13:05.079 - <==      Total: 4
+2024-08-12_23:13:05.080 - Scraching around the collections all posts
+2024-08-12_23:13:18.548 - Starting ContentManagementSystemApplication using Java 1.8.0_202 on DESKTOP-0FGFVV5 with PID 11580 (C:\Users\Acer\Desktop\Content_Management_System\target\classes started by Acer in C:\Users\Acer\Desktop\Content_Management_System)
+2024-08-12_23:13:18.549 - Running with Spring Boot v2.7.17, Spring v5.3.30
+2024-08-12_23:13:18.550 - No active profile set, falling back to 1 default profile: "default"
+2024-08-12_23:13:18.635 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-12_23:13:18.636 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-12_23:13:21.227 - Tomcat initialized with port(s): 8080 (http)
+2024-08-12_23:13:21.248 - Initializing ProtocolHandler ["http-nio-8080"]

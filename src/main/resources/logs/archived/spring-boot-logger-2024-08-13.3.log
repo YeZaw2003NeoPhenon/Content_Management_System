@@ -1,0 +1,22 @@
+2024-08-13_22:46:05.657 - ==> Parameters: 
+2024-08-13_22:46:05.660 - <==    Columns: id, title, content, imgurl
+2024-08-13_22:46:05.660 - <==        Row: 58, Lets cheer on for majestic compensation and drink ultil extorionate, ff........., /uploads/fauana.jpg
+2024-08-13_22:46:05.661 - <==        Row: 49, k, ijiih, /uploads/mainFoodColImg1.jpg
+2024-08-13_22:46:05.661 - <==        Row: 55, kk, awesome car, /uploads/mainFoodColImg2.jpg
+2024-08-13_22:46:05.661 - <==        Row: 56, nn, sophisticated , glamorously spectacular blog post, /uploads/mainFoodColImg3.jpg
+2024-08-13_22:46:05.662 - <==        Row: 59, mm, mm, /uploads/techImgFour.jpg
+2024-08-13_22:46:05.662 - <==        Row: 60, try to Canada, canada is tranquil city precariously brimming with people and some majestic tourist attraction places.., /uploads/colTechImgOne.jpg
+2024-08-13_22:46:05.662 - <==      Total: 6
+2024-08-13_22:46:05.663 - Scraching around the collections all posts
+2024-08-13_23:10:50.790 - Starting ContentManagementSystemApplication using Java 1.8.0_202 on DESKTOP-0FGFVV5 with PID 10080 (C:\Users\Acer\Desktop\Content_Management_System\target\classes started by Acer in C:\Users\Acer\Desktop\Content_Management_System)
+2024-08-13_23:10:50.791 - Running with Spring Boot v2.7.17, Spring v5.3.30
+2024-08-13_23:10:50.793 - No active profile set, falling back to 1 default profile: "default"
+2024-08-13_23:10:50.897 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-13_23:10:50.897 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-13_23:10:53.490 - Tomcat initialized with port(s): 8080 (http)
+2024-08-13_23:10:53.510 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-13_23:10:53.516 - Starting service [Tomcat]
+2024-08-13_23:10:53.516 - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-08-13_23:10:53.644 - Initializing Spring embedded WebApplicationContext
+2024-08-13_23:10:53.644 - Root WebApplicationContext: initialization completed in 2746 ms
+2024-08-13_23:10:54.673 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4a9806a1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@274f9c89, org.springframework.security.web.context.SecurityContextPersistenceFilter@139f5f65, org.springframework.security.web.header.HeaderWriterFilter@69d0d9c5, org.springframework.security.web.authentication.logout.LogoutFilter@7da726ea, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@433024e5, org.springframework.security.web.session.ConcurrentSessionFilter@23027f1f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@70b6ac1d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1fcddbb6, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@6cf02942, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@201453d2, org.springframework.security.web.session.SessionManagementFilter@2ae05c2c, org.springframework.security.web.access.ExceptionTranslationFilter@6aeeefc2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2a18a2f3]

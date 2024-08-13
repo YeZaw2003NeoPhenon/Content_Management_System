@@ -1,0 +1,40 @@
+2024-08-12_23:10:41.736 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-12_23:10:41.741 - ==> Parameters: 
+2024-08-12_23:10:41.743 - <==    Columns: id, title, content, imgurl
+2024-08-12_23:10:41.743 - <==        Row: 50, m, m, /uploads/carImage4.jpg
+2024-08-12_23:10:41.743 - <==        Row: 56, nn, sophisticated , glamorously spectacular blog post, /uploads/restaurntChiefImg.jpg
+2024-08-12_23:10:41.743 - <==        Row: 49, k, ijiih, /uploads/carImage2.jpg
+2024-08-12_23:10:41.744 - <==        Row: 58, Lets cheer on for majestic compensation and drink ultil extorionate, ff........., /uploads/fauana.jpg
+2024-08-12_23:10:41.744 - <==        Row: 55, kk, awesome car, /uploads/carImage4.jpg
+2024-08-12_23:10:41.745 - <==      Total: 5
+2024-08-12_23:10:41.746 - Scraching around the collections all posts
+2024-08-12_23:10:46.296 - ==>  Preparing: DELETE FROM Post WHERE id = ?;
+2024-08-12_23:10:46.298 - ==> Parameters: 50(Integer)
+2024-08-12_23:10:46.299 - <==    Updates: 1
+2024-08-12_23:10:46.299 - Post Deleted Successfully : 50
+2024-08-12_23:10:46.308 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-12_23:10:46.309 - ==> Parameters: 
+2024-08-12_23:10:46.310 - <==    Columns: id, title, content, imgurl
+2024-08-12_23:10:46.311 - <==        Row: 56, nn, sophisticated , glamorously spectacular blog post, /uploads/restaurntChiefImg.jpg
+2024-08-12_23:10:46.313 - <==        Row: 49, k, ijiih, /uploads/carImage2.jpg
+2024-08-12_23:10:46.314 - <==        Row: 58, Lets cheer on for majestic compensation and drink ultil extorionate, ff........., /uploads/fauana.jpg
+2024-08-12_23:10:46.314 - <==        Row: 55, kk, awesome car, /uploads/carImage4.jpg
+2024-08-12_23:10:46.314 - <==      Total: 4
+2024-08-12_23:10:46.314 - Scraching around the collections all posts
+2024-08-12_23:10:48.514 - ==>  Preparing: SELECT id, title, content, imgURL FROM Post WHERE id = ?
+2024-08-12_23:10:48.515 - ==> Parameters: 56(Integer)
+2024-08-12_23:10:48.518 - <==    Columns: id, title, content, imgurl
+2024-08-12_23:10:48.518 - <==        Row: 56, nn, sophisticated , glamorously spectacular blog post, /uploads/restaurntChiefImg.jpg
+2024-08-12_23:10:48.518 - <==      Total: 1
+2024-08-12_23:10:50.688 - ==>  Preparing: UPDATE Post SET title = ?, content = ? WHERE id = ?;
+2024-08-12_23:10:50.689 - ==> Parameters: nn(String), sophisticated , glamorously spectacular blog post(String), 56(Integer)
+2024-08-12_23:10:50.690 - <==    Updates: 1
+2024-08-12_23:10:50.690 - Posts Updated Successfully : 56
+2024-08-12_23:10:50.700 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-12_23:10:50.701 - ==> Parameters: 
+2024-08-12_23:10:50.702 - <==    Columns: id, title, content, imgurl
+2024-08-12_23:10:50.702 - <==        Row: 49, k, ijiih, /uploads/carImage2.jpg
+2024-08-12_23:10:50.702 - <==        Row: 58, Lets cheer on for majestic compensation and drink ultil extorionate, ff........., /uploads/fauana.jpg
+2024-08-12_23:10:50.702 - <==        Row: 55, kk, awesome car, /uploads/carImage4.jpg
+2024-08-12_23:10:50.703 - <==        Row: 56, nn, sophisticated , glamorously spectacular blog post, /uploads/restaurntChiefImg.jpg
+2024-08-12_23:10:50.703 - <==      Total: 4

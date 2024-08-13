@@ -1,0 +1,42 @@
+2024-07-28_22:19:52.648 - <==      Total: 5
+2024-07-28_22:19:52.650 - Scraching around the collections all posts
+2024-07-28_22:20:13.666 - ==>  Preparing: SELECT id, title, content, imgURL FROM Post WHERE id = ?
+2024-07-28_22:20:13.668 - ==> Parameters: 49(Integer)
+2024-07-28_22:20:13.669 - <==    Columns: id, title, content, imgurl
+2024-07-28_22:20:13.670 - <==        Row: 49, k, ijiih, /uploads/carImage3.jpg
+2024-07-28_22:20:13.671 - <==      Total: 1
+2024-07-28_22:20:15.349 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-07-28_22:20:15.350 - ==> Parameters: 
+2024-07-28_22:20:15.388 - <==    Columns: id, title, content, imgurl
+2024-07-28_22:20:15.388 - <==        Row: 56, nn, nnnn, /uploads/colTechImgTwo.jpg
+2024-07-28_22:20:15.388 - <==        Row: 57, daily affirmation and concentration , try to zero on into new still at least 1 hr a day 
+try to jerk off to sustainably laboriously keep track of virtuous proteins levels in your body
+( no porn ), /uploads/Premium Vector _ App development illustration.jpg
+2024-07-28_22:20:15.389 - <==        Row: 55, kk, awesome car, /uploads/ludicrousImg.jpg
+2024-07-28_22:20:15.389 - <==        Row: 49, k, ijiih, /uploads/carImage3.jpg
+2024-07-28_22:20:15.389 - <==        Row: 50, m, m, /uploads/Easy Tomato Cucumber Salad.jpg
+2024-07-28_22:20:15.389 - <==      Total: 5
+2024-07-28_22:20:15.389 - Scraching around the collections all posts
+2024-07-28_22:20:22.023 - ==>  Preparing: SELECT id, title, content, imgURL FROM Post WHERE id = ?
+2024-07-28_22:20:22.024 - ==> Parameters: 49(Integer)
+2024-07-28_22:20:22.025 - <==    Columns: id, title, content, imgurl
+2024-07-28_22:20:22.025 - <==        Row: 49, k, ijiih, /uploads/carImage3.jpg
+2024-07-28_22:20:22.025 - <==      Total: 1
+2024-07-28_22:20:35.302 - Application shutdown requested.
+2024-07-28_22:20:35.496 - Pausing ProtocolHandler ["http-nio-8080"]
+2024-07-28_22:20:35.497 - Stopping service [Tomcat]
+2024-07-28_22:20:35.506 - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-07-28_22:20:35.532 - The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2024-07-28_22:20:35.533 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-07-28_22:20:35.538 - Destroying ProtocolHandler ["http-nio-8080"]
+2024-07-28_22:20:35.544 - HikariPool-1 - Shutdown initiated...
+2024-07-28_22:20:35.553 - HikariPool-1 - Shutdown completed.

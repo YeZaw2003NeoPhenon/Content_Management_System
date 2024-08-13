@@ -1,0 +1,41 @@
+2024-08-12_22:36:42.961 - Starting ProtocolHandler ["http-nio-8080"]
+2024-08-12_22:36:43.001 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-08-12_22:36:43.022 - Started ContentManagementSystemApplication in 5.297 seconds (JVM running for 6.348)
+2024-08-12_22:36:48.657 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-12_22:36:48.659 - Initializing Servlet 'dispatcherServlet'
+2024-08-12_22:36:48.662 - Completed initialization in 2 ms
+2024-08-12_22:36:48.737 - HikariPool-1 - Starting...
+2024-08-12_22:36:48.972 - HikariPool-1 - Start completed.
+2024-08-12_22:36:49.004 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?
+2024-08-12_22:36:49.029 - ==> Parameters: Neo(String)
+2024-08-12_22:36:49.055 - <==    Columns: username, password, enabled, authority
+2024-08-12_22:36:49.058 - <==        Row: Neo, $2a$12$TxOY073F7yTp0qTMxSn1qOLWOjzOtjn2Dc6LfteXId5qqLHqGn9vy, t, ADMIN
+2024-08-12_22:36:49.062 - <==      Total: 1
+2024-08-12_22:36:49.217 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-12_22:36:49.217 - ==> Parameters: 
+2024-08-12_22:36:49.220 - <==    Columns: id, title, content, imgurl
+2024-08-12_22:36:49.220 - <==        Row: 56, nn, nnnn, /uploads/colTechImgTwo.jpg
+2024-08-12_22:36:49.221 - <==        Row: 55, kk, awesome car, /uploads/ludicrousImg.jpg
+2024-08-12_22:36:49.221 - <==        Row: 49, k, ijiih, /uploads/carImage3.jpg
+2024-08-12_22:36:49.222 - <==        Row: 50, m, m, /uploads/Easy Tomato Cucumber Salad.jpg
+2024-08-12_22:36:49.222 - <==      Total: 4
+2024-08-12_22:36:49.226 - Scraching around the collections all posts
+2024-08-12_22:36:52.943 - ==>  Preparing: SELECT id, title, content, imgURL FROM Post WHERE id = ?
+2024-08-12_22:36:52.946 - ==> Parameters: 56(Integer)
+2024-08-12_22:36:52.948 - <==    Columns: id, title, content, imgurl
+2024-08-12_22:36:52.949 - <==        Row: 56, nn, nnnn, /uploads/colTechImgTwo.jpg
+2024-08-12_22:36:52.950 - <==      Total: 1
+2024-08-12_22:36:55.424 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-12_22:36:55.425 - ==> Parameters: 
+2024-08-12_22:36:55.427 - <==    Columns: id, title, content, imgurl
+2024-08-12_22:36:55.427 - <==        Row: 56, nn, nnnn, /uploads/colTechImgTwo.jpg
+2024-08-12_22:36:55.428 - <==        Row: 55, kk, awesome car, /uploads/ludicrousImg.jpg
+2024-08-12_22:36:55.428 - <==        Row: 49, k, ijiih, /uploads/carImage3.jpg
+2024-08-12_22:36:55.428 - <==        Row: 50, m, m, /uploads/Easy Tomato Cucumber Salad.jpg
+2024-08-12_22:36:55.430 - <==      Total: 4
+2024-08-12_22:36:55.430 - Scraching around the collections all posts
+2024-08-12_22:52:21.910 - Starting ContentManagementSystemApplication using Java 1.8.0_202 on DESKTOP-0FGFVV5 with PID 3220 (C:\Users\Acer\Desktop\Content_Management_System\target\classes started by Acer in C:\Users\Acer\Desktop\Content_Management_System)
+2024-08-12_22:52:21.912 - Running with Spring Boot v2.7.17, Spring v5.3.30
+2024-08-12_22:52:21.913 - No active profile set, falling back to 1 default profile: "default"
+2024-08-12_22:52:22.008 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-12_22:52:22.009 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'

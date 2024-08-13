@@ -1,0 +1,35 @@
+2024-08-12_22:30:10.918 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-12_22:30:10.922 - ==> Parameters: 
+2024-08-12_22:30:10.923 - <==    Columns: id, title, content, imgurl
+2024-08-12_22:30:10.924 - <==        Row: 56, nn, nnnn, /uploads/colTechImgTwo.jpg
+2024-08-12_22:30:10.924 - <==        Row: 55, kk, awesome car, /uploads/ludicrousImg.jpg
+2024-08-12_22:30:10.925 - <==        Row: 49, k, ijiih, /uploads/carImage3.jpg
+2024-08-12_22:30:10.925 - <==        Row: 50, m, m, /uploads/Easy Tomato Cucumber Salad.jpg
+2024-08-12_22:30:10.926 - <==      Total: 4
+2024-08-12_22:30:10.963 - Scraching around the collections all posts
+2024-08-12_22:30:19.020 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?
+2024-08-12_22:30:19.021 - ==> Parameters: Neo(String)
+2024-08-12_22:30:19.023 - <==    Columns: username, password, enabled, authority
+2024-08-12_22:30:19.023 - <==        Row: Neo, $2a$12$TxOY073F7yTp0qTMxSn1qOLWOjzOtjn2Dc6LfteXId5qqLHqGn9vy, t, ADMIN
+2024-08-12_22:30:19.023 - <==      Total: 1
+2024-08-12_22:30:19.357 - ==>  Preparing: SELECT users.username , users.password , users.enabled , authorities.authority FROM users INNER JOIN authorities ON users.username = authorities.username WHERE users.username = ?
+2024-08-12_22:30:19.357 - ==> Parameters: Neo(String)
+2024-08-12_22:30:19.359 - <==    Columns: username, password, enabled, authority
+2024-08-12_22:30:19.359 - <==        Row: Neo, $2a$12$TxOY073F7yTp0qTMxSn1qOLWOjzOtjn2Dc6LfteXId5qqLHqGn9vy, t, ADMIN
+2024-08-12_22:30:19.361 - <==      Total: 1
+2024-08-12_22:30:19.373 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-12_22:30:19.373 - ==> Parameters: 
+2024-08-12_22:30:19.375 - <==    Columns: id, title, content, imgurl
+2024-08-12_22:30:19.375 - <==        Row: 56, nn, nnnn, /uploads/colTechImgTwo.jpg
+2024-08-12_22:30:19.375 - <==        Row: 55, kk, awesome car, /uploads/ludicrousImg.jpg
+2024-08-12_22:30:19.375 - <==        Row: 49, k, ijiih, /uploads/carImage3.jpg
+2024-08-12_22:30:19.376 - <==        Row: 50, m, m, /uploads/Easy Tomato Cucumber Salad.jpg
+2024-08-12_22:30:19.376 - <==      Total: 4
+2024-08-12_22:30:19.377 - Scraching around the collections all posts
+2024-08-12_22:32:06.828 - Starting ContentManagementSystemApplication using Java 1.8.0_202 on DESKTOP-0FGFVV5 with PID 10828 (C:\Users\Acer\Desktop\Content_Management_System\target\classes started by Acer in C:\Users\Acer\Desktop\Content_Management_System)
+2024-08-12_22:32:06.830 - Running with Spring Boot v2.7.17, Spring v5.3.30
+2024-08-12_22:32:06.831 - No active profile set, falling back to 1 default profile: "default"
+2024-08-12_22:32:06.944 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-12_22:32:06.945 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-12_22:32:09.461 - Tomcat initialized with port(s): 8080 (http)
+2024-08-12_22:32:09.479 - Initializing ProtocolHandler ["http-nio-8080"]
