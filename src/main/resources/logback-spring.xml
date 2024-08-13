@@ -20,12 +20,18 @@
 	<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
 	
 	<maxFileSize>3KB</maxFileSize>
+<<<<<<< HEAD
 
 	</timeBasedFileNamingAndTriggeringPolicy>
 	
 	<!-- <maxHistory>100</maxHistory>
 	<totalSizeCap>100MB</totalSizeCap>
 	 -->
+=======
+	
+	</timeBasedFileNamingAndTriggeringPolicy>
+	
+>>>>>>> b320972625253af0747d64de3d8764da4b5418e7
    </rollingPolicy>
    
 </appender>
@@ -39,4 +45,8 @@
 		<appender-ref ref="RollingFile"/>
 		<appender-ref ref="Console"/>
 	</logger>	
+<<<<<<< HEAD
 </configuration>
+=======
+</configuration>
+>>>>>>> b320972625253af0747d64de3d8764da4b5418e7

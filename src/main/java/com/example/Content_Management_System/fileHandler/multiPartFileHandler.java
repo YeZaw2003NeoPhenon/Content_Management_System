@@ -13,13 +13,17 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
+<<<<<<< HEAD
 import org.thymeleaf.standard.processor.StandardInliningCDATASectionProcessor;
+=======
+>>>>>>> b320972625253af0747d64de3d8764da4b5418e7
 
 @Component
 public class multiPartFileHandler implements fileHandlerService{
 	
 	@Autowired
 	private ServletContext servletContext;
+<<<<<<< HEAD
 	
 	private Logger LOGGER = LoggerFactory.getLogger(multiPartFileHandler.class);
 	
@@ -29,6 +33,16 @@ public class multiPartFileHandler implements fileHandlerService{
 			  String filename = multipartFile.getOriginalFilename();
 			 String upload_Dir = servletContext.getRealPath("/uploads/");
 			Path uploadPath =  Paths.get(upload_Dir);
+=======
+
+	private Logger LOGGER = LoggerFactory.getLogger(multiPartFileHandler.class);
+	
+	@Override
+	public String saveFile(MultipartFile multipartFile) {
+			  String filename = multipartFile.getOriginalFilename();
+			 String upload_Dir =  servletContext.getRealPath("/uploads/"); 
+			 Path uploadPath = Paths.get(upload_Dir);
+>>>>>>> b320972625253af0747d64de3d8764da4b5418e7
 			 try {
 			 
 			  if( !Files.exists(uploadPath) ) {
@@ -38,11 +52,14 @@ public class multiPartFileHandler implements fileHandlerService{
 				}
 			  Path filePath = uploadPath.resolve(filename);
 		      Files.copy(multipartFile.getInputStream() , filePath, StandardCopyOption.REPLACE_EXISTING);
+<<<<<<< HEAD
 		      
 				LOGGER.debug("Attempting to save file: {}", filename);
 				LOGGER.debug("Upload directory: {}", upload_Dir);
 				LOGGER.debug("Final file path: {}", filePath.toString());
 				
+=======
+>>>>>>> b320972625253af0747d64de3d8764da4b5418e7
 		      LOGGER.info("File saved successfully: {}", filename);
 		      return "/uploads/" + filename;
 			  }

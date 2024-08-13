@@ -1,0 +1,22 @@
+2024-08-12_22:35:01.096 - ==>  Preparing: SELECT id,title,content,imgURL FROM Post
+2024-08-12_22:35:01.099 - ==> Parameters: 
+2024-08-12_22:35:01.103 - <==    Columns: id, title, content, imgurl
+2024-08-12_22:35:01.104 - <==        Row: 56, nn, nnnn, /uploads/colTechImgTwo.jpg
+2024-08-12_22:35:01.104 - <==        Row: 55, kk, awesome car, /uploads/ludicrousImg.jpg
+2024-08-12_22:35:01.105 - <==        Row: 49, k, ijiih, /uploads/carImage3.jpg
+2024-08-12_22:35:01.105 - <==        Row: 50, m, m, /uploads/Easy Tomato Cucumber Salad.jpg
+2024-08-12_22:35:01.106 - <==      Total: 4
+2024-08-12_22:35:01.108 - Scraching around the collections all posts
+2024-08-12_22:36:38.510 - Starting ContentManagementSystemApplication using Java 1.8.0_202 on DESKTOP-0FGFVV5 with PID 12768 (C:\Users\Acer\Desktop\Content_Management_System\target\classes started by Acer in C:\Users\Acer\Desktop\Content_Management_System)
+2024-08-12_22:36:38.512 - Running with Spring Boot v2.7.17, Spring v5.3.30
+2024-08-12_22:36:38.513 - No active profile set, falling back to 1 default profile: "default"
+2024-08-12_22:36:38.624 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-12_22:36:38.624 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-12_22:36:40.940 - Tomcat initialized with port(s): 8080 (http)
+2024-08-12_22:36:40.957 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-12_22:36:40.962 - Starting service [Tomcat]
+2024-08-12_22:36:40.964 - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-08-12_22:36:41.090 - Initializing Spring embedded WebApplicationContext
+2024-08-12_22:36:41.095 - Root WebApplicationContext: initialization completed in 2470 ms
+2024-08-12_22:36:42.085 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@a54fbdd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@46cf85c6, org.springframework.security.web.context.SecurityContextPersistenceFilter@2f712e4e, org.springframework.security.web.header.HeaderWriterFilter@6c75da2f, org.springframework.security.web.authentication.logout.LogoutFilter@5cf7906, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2a1b0871, org.springframework.security.web.session.ConcurrentSessionFilter@32b0f6b3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@198f2763, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4beb4b39, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@4b50f0e9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2e56cdcc, org.springframework.security.web.session.SessionManagementFilter@650628d6, org.springframework.security.web.access.ExceptionTranslationFilter@1b755cdd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@a497c67]
+2024-08-12_22:36:42.925 - LiveReload server is running on port 35729
