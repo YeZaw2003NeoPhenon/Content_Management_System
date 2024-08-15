@@ -17,7 +17,7 @@ public class AccountCreateServiceImp implements accountCreationService {
 	public int accountCreateProcess(userDetailModel userDetailModel) {
 		
 	  userDetailModel.setPassword( new BCryptPasswordEncoder().encode(userDetailModel.getPassword()));
-		
+	  userDetailModel.setEnabled(true);
 	  int userAccountCreationOutput = accountCreationRepository.createUserAccount(userDetailModel);
 	  int adminAccountCreationOutput = accountCreationRepository.createAdminAccount(userDetailModel);
 	  

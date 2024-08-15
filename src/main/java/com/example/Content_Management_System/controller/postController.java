@@ -1,15 +1,9 @@
 package com.example.Content_Management_System.controller;
 
-<<<<<<< HEAD
 
 import java.util.List;
 import java.util.Optional;
 
-=======
-
-import java.util.List;
-
->>>>>>> b320972625253af0747d64de3d8764da4b5418e7
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,16 +17,13 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.example.Content_Management_System.exception.AuthorizationException;
 import com.example.Content_Management_System.exception.FileUploadException;
 import com.example.Content_Management_System.exception.PostNotFoundException;
 import com.example.Content_Management_System.fileHandler.multiPartFileHandler;
 import com.example.Content_Management_System.model.Post;
 import com.example.Content_Management_System.service.postServiceImp;
-<<<<<<< HEAD
 import com.example.Content_Management_System.service.userDetailServiceImp;
-=======
->>>>>>> b320972625253af0747d64de3d8764da4b5418e7
+
 
 @Controller
 public class postController {
@@ -43,12 +34,10 @@ public class postController {
 	@Autowired
 	private multiPartFileHandler multiPartFileHandler; 
 	
-<<<<<<< HEAD
+
 	@Autowired
 	private userDetailServiceImp userDetailServiceImp;
 	
-=======
->>>>>>> b320972625253af0747d64de3d8764da4b5418e7
 	private Logger LOGGER = LoggerFactory.getLogger(postController.class);
 	
   @RequestMapping( value = {"/posts" , "/" }, method = RequestMethod.GET)

@@ -18,7 +18,8 @@ public class authenticationController {
 	@RequestMapping( value = "/login" , method =  RequestMethod.GET)
 	private ModelAndView login( @RequestParam(value = "error", required = false) String error,
 			 @RequestParam(value = "logout", required = false) String logout,
-			 @RequestParam(value = "sessionExpired", required = false) String sessionExpired) {
+			 @RequestParam(value = "sessionExpired", required = false) String sessionExpired,
+			 @RequestParam(value = "accountDisabled", required = false) String accountDisabled) {
 		
 		ModelAndView modelAndView = new ModelAndView();
 		
@@ -32,9 +33,12 @@ public class authenticationController {
 	        if (sessionExpired != null) {
 	        	modelAndView.addObject("warningMessage", "Your session has expired, please log in again");
 	        }
-		
-		modelAndView.setViewName("login");
-		return modelAndView;
+	        if (accountDisabled != null) {
+	            modelAndView.addObject("warningMessage", "Your account is disabled, please contact support");
+	        }
+
+	        modelAndView.setViewName("login");
+	        return modelAndView;
 	}
 	
 	@RequestMapping( value = "/logout" , method =  RequestMethod.GET)

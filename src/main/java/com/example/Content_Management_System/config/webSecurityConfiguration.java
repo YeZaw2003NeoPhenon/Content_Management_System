@@ -54,17 +54,12 @@ public class webSecurityConfiguration{
 			 httpSecurity
 						.csrf().disable()
 						.authorizeRequests()
-<<<<<<< HEAD
 						.antMatchers("/login").anonymous()
 						.antMatchers("/css/**" , "/js/**" ,"/img/**","/file/**","/uploads/**").permitAll()
-						.antMatchers("/users/**").hasRole("users")
-						.antMatchers("/admin/**").hasRole("admin")
-=======
-						.requestMatchers("/login").anonymous()
-						.requestMatchers("/css/**" , "/js/**" ,"/img/**","/file/**","/uploads/**").permitAll()
-						.requestMatchers("/users/**").hasRole("USERS")
-						.requestMatchers("/admin/**").hasRole("ADMIN")
->>>>>>> b320972625253af0747d64de3d8764da4b5418e7
+						.antMatchers("/users/**").hasRole("USER")
+						.antMatchers("/admin/**").hasRole("ADMIN")
+						.antMatchers("/login").anonymous()
+						.antMatchers("/css/**" , "/js/**" ,"/img/**","/file/**","/uploads/**").permitAll()
 						.anyRequest().authenticated()
 						
 						.and()

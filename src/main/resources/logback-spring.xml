@@ -13,6 +13,7 @@
 		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
 				<Pattern>%d{yyyy-MM-dd_HH:mm:ss.SSS} - %msg%n</Pattern>
 		</encoder>
+		
 	<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 <!--  rollover daily and when the file reaches 10 MegaBytes -->
 	<fileNamePattern>${LOGS}/archived/spring-boot-logger-%d{yyyy-MM-dd}.%i.log </fileNamePattern>
@@ -20,18 +21,13 @@
 	<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
 	
 	<maxFileSize>3KB</maxFileSize>
-<<<<<<< HEAD
 
 	</timeBasedFileNamingAndTriggeringPolicy>
 	
 	<!-- <maxHistory>100</maxHistory>
 	<totalSizeCap>100MB</totalSizeCap>
 	 -->
-=======
 	
-	</timeBasedFileNamingAndTriggeringPolicy>
-	
->>>>>>> b320972625253af0747d64de3d8764da4b5418e7
    </rollingPolicy>
    
 </appender>
@@ -45,8 +41,5 @@
 		<appender-ref ref="RollingFile"/>
 		<appender-ref ref="Console"/>
 	</logger>	
-<<<<<<< HEAD
+
 </configuration>
-=======
-</configuration>
->>>>>>> b320972625253af0747d64de3d8764da4b5418e7

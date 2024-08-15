@@ -25,7 +25,7 @@ public class accountCreationController {
 	}
 	
 	@RequestMapping( value = "/accountCreationProcess", method = RequestMethod.POST )
-	public ModelAndView accountCreationProcess( @ModelAttribute userDetailModel userObjTobeAuthorized , RedirectAttributes redirectAttributes ) {
+	public ModelAndView accountCreationProcess( @ModelAttribute userDetailModel userObjTobeAuthorized , RedirectAttributes redirectAttributes ){
 		ModelAndView modelAndView = new ModelAndView();
 		
 		int totalAccountCreationResult = accountCreateServiceImp.accountCreateProcess(userObjTobeAuthorized);
@@ -41,4 +41,5 @@ public class accountCreationController {
 		 modelAndView.setViewName("redirect:/posts");
 		return modelAndView;
 	}
+	
 }

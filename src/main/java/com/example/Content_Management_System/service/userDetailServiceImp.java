@@ -1,6 +1,7 @@
 package com.example.Content_Management_System.service;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -29,23 +30,17 @@ public class userDetailServiceImp implements UserDetailsService{
 	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-	 userDetailModel userDetailModel = userDetailRepository.loginProcess(username).orElseThrow(() -> {
-		 logger.error("User not found with username: {}", username);
-         return new UsernameNotFoundException("User not found with username: " + username);
-     });
-	 
-	 if( userDetailModel == null ) {
-		 new UsernameNotFoundException(" User still stuck on tie to be found!");
-	 }
-	 
-	 List<GrantedAuthority> authorities = new ArrayList<>();
-	 authorities.add( new SimpleGrantedAuthority("ROLE_" + userDetailModel.getAuthority() ));
-	 
-		return User.withUsername(userDetailModel.getUsername())
-				   .password(userDetailModel.getPassword())
-				   .authorities(authorities)
-				   .accountExpired(!userDetailModel.isEnabled())
-				   .build();
+		
+		 userDetailModel userDetailModel = userDetailRepository.loginProcess(username).orElseThrow(() -> {
+			 logger.error("User not found with username: {}", username);
+	         return new UsernameNotFoundException("User not found with username: " + username);
+	     });
+		 
+			return User.withUsername(userDetailModel.getUsername())
+					   .password(userDetailModel.getPassword())
+					   .authorities(userDetailModel.getAuthorities())
+					   .accountExpired(!userDetailModel.isEnabled())
+					   .build();
 	}
 	
 	public String getCurrentUser() {
