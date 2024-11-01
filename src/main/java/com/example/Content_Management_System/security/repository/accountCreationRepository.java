@@ -1,8 +1,8 @@
-package com.example.Content_Management_System.repository;
+package com.example.Content_Management_System.security.repository;
 
 import org.apache.ibatis.annotations.Mapper;
 
-import com.example.Content_Management_System.model.userDetailModel;
+import com.example.Content_Management_System.security.user.userDetailModel;
 
 @Mapper
 public interface accountCreationRepository {

@@ -1,4 +1,4 @@
-package com.example.Content_Management_System.controller;
+package com.example.Content_Management_System.security.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.example.Content_Management_System.model.userDetailModel;
-import com.example.Content_Management_System.service.AccountCreateServiceImp;
+import com.example.Content_Management_System.security.service.serviceImp.AccountCreateServiceImp;
+import com.example.Content_Management_System.security.user.userDetailModel;
+
 
 @Controller
 public class accountCreationController {

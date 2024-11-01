@@ -39,7 +39,6 @@
            		<if test="imgURL != null">#{imgURL},</if> 		
          	</trim>
         </insert>
-       
         
      <select id="getPostById" resultMap="PostResultMap" parameterType="int">
         SELECT id, title, content, imgURL FROM Post WHERE id = #{id}
@@ -58,5 +57,16 @@
       		</set>
       		WHERE id = #{id};
       </update>
+      
+      <select id = "searchPosts" parameterType = "String" resultMap = "PostResultMap"> 
+      		SELECT * FROM Post
+      		<where>
+      			<if test = "query != null and query != ''">
+      				title LIKE CONCAT('%', #{query}, '%')
+            		OR content LIKE CONCAT('%', #{query}, '%')
+            		OR imgURL LIKE CONCAT('%', #{query}, '%')
+      			</if>
+      		</where>
+      </select>
       
    </mapper>

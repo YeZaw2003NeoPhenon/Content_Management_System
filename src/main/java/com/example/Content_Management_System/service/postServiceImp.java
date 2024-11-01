@@ -44,4 +44,9 @@ public class postServiceImp implements PostService{
 		return postMapper.updatePost(post);
 	}
 
+	@Override
+	public List<Post> searchPosts(String query) {
+		return postMapper.searchPosts(query);
+	}
+	
 }

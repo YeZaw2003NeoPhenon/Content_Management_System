@@ -1,4 +1,4 @@
-package com.example.Content_Management_System.model;
+package com.example.Content_Management_System.security.user;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -13,6 +13,11 @@ import lombok.Getter;
 import lombok.Setter;
 
 public class userDetailModel implements UserDetails{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	@Getter
 	@Setter
@@ -29,6 +34,16 @@ public class userDetailModel implements UserDetails{
 	@Getter
 	@Setter
 	private String authority;
+	
+//	public userDetailModel(UserDetails user) {
+//		this.username = user.getUsername();
+//		this.password = user.getPassword();
+//		this.enabled = user.isEnabled();
+//		this.authority = user.getAuthorities().stream()
+//				.map(GrantedAuthority::getAuthority)
+//				.collect(Collectors.joining(" "));
+//	}
+	
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -36,10 +51,9 @@ public class userDetailModel implements UserDetails{
 	    if (authority == null || authority.isEmpty()) {
 	        return Collections.emptyList();
 	    }
-	    
-		return Arrays.stream(authority.split(" "))
-				.map(role -> role.startsWith("ROLE_") ? role : "ROLE_" + role)
-				.map(SimpleGrantedAuthority :: new).collect(Collectors.toList());
+	    return Arrays.stream(authority.split(" "))
+	    			.map(role -> role.startsWith("ROLE_") ? role : "ROLE_" + role)
+	    			.map(SimpleGrantedAuthority::new).collect(Collectors.toList());
 	}
 	
 	@Override
@@ -55,6 +69,11 @@ public class userDetailModel implements UserDetails{
 
 	@Override
 	public boolean isCredentialsNonExpired() {
+		return true;
+	}
+	
+	@Override
+	public boolean isEnabled() {
 		return true;
 	}
 	

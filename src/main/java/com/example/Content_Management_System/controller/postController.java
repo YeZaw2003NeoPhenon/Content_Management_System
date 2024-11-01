@@ -3,6 +3,7 @@ package com.example.Content_Management_System.controller;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,8 +22,8 @@ import com.example.Content_Management_System.exception.FileUploadException;
 import com.example.Content_Management_System.exception.PostNotFoundException;
 import com.example.Content_Management_System.fileHandler.multiPartFileHandler;
 import com.example.Content_Management_System.model.Post;
+import com.example.Content_Management_System.security.user.userDetailServiceImp;
 import com.example.Content_Management_System.service.postServiceImp;
-import com.example.Content_Management_System.service.userDetailServiceImp;
 
 
 @Controller
@@ -120,7 +121,7 @@ public class postController {
   public ModelAndView editPost(@PathVariable int id) {
 	  ModelAndView modelAndView = new ModelAndView();
 	  
-	 Post postToBeUpdated =   postServiceImp.getPostById(id).orElseThrow(() -> new PostNotFoundException("Post with ID " + id + " not found."));
+	 Post postToBeUpdated =  postServiceImp.getPostById(id).orElseThrow(() -> new PostNotFoundException("Post with ID " + id + " not found."));
 	 
 	 modelAndView.addObject("post", postToBeUpdated);
 	  modelAndView.setViewName("updatePost");
@@ -128,7 +129,7 @@ public class postController {
   }
   
   @RequestMapping( value = "/update" , method = RequestMethod.POST)
-  public ModelAndView updatePost( @ModelAttribute Post post , RedirectAttributes redirectAttributes , @RequestParam("imageFile") MultipartFile multipartFile ) {
+  public ModelAndView updatePost(@ModelAttribute Post post , RedirectAttributes redirectAttributes , @RequestParam("imageFile") MultipartFile multipartFile ) {
 	  ModelAndView modelAndView = new ModelAndView();
 	  
 	  if( !multipartFile.isEmpty()) {
@@ -155,6 +156,23 @@ public class postController {
 	  }
 	  
 	  modelAndView.setViewName("redirect:/posts");
+	  return modelAndView;
+  }
+  
+  @RequestMapping(value = "/posts/search" , method = RequestMethod.GET)
+  public ModelAndView searchPosts(@RequestParam(name = "query") String query) {
+	  ModelAndView modelAndView = new ModelAndView();
+	  List<Post> filteredPosts = postServiceImp.searchPosts(query);
+	   
+	  // two enrapturing options => for filtering out and searching lists of items 
+	  // directly embadded with Mybatis (dynamic logic) to perform filtering in db, for better sustainable optimization( good for large datasets)
+//	  List<Post> current_posts = postServiceImp.getAllPosts();
+//	  List<Post> filteredPosts = current_posts.stream().filter(post -> post.getTitle().toLowerCase().contains(query) ||
+//			  															String.valueOf(post.getId()).toLowerCase().contains(query) ||
+//			  															post.getContent().toLowerCase().contains(query))
+//			  															.collect(Collectors.toList());
+	  modelAndView.addObject("posts", filteredPosts);
+	  modelAndView.setViewName("posts");
 	  return modelAndView;
   }
   

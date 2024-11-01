@@ -82,6 +82,12 @@
         </div>
     </div>
     
+  <div th:if = "${posts.size() == 0}"> 
+    	 <span class="text-muted text-danger text-center mt-3 mb-3 fw-bold fs-5 d-block">No posts found matching your search criteria.</span>
+  </div>
+    
+    
+    
 <footer class="footer bg-dark text-white py-4">
     <div class="container">
         <div class="row">
@@ -101,10 +107,10 @@
             <div class="col-md-3 mb-3">
                 <h5>Newsletter</h5>
                 <p>Stay updated with our latest posts:</p>
-                <form action="/subscribe" method="POST">
+                <form th:action = "@{/posts/search}" method="GET" class="d-flex mb-4">
                     <div class="input-group">
-                        <input type="email" class="form-control" placeholder="Your email" required>
-                        <button class="btn btn-primary" type="submit">Subscribe</button>
+    					<input type="text" name="query" class="form-control" placeholder="Search posts..." required>
+    					<button type="submit" class="btn btn-primary ms-2">Search</button>
                     </div>
                 </form>
             </div>

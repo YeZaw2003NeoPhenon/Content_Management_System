@@ -20,7 +20,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
-import com.example.Content_Management_System.service.userDetailServiceImp;
+import com.example.Content_Management_System.security.user.userDetailServiceImp;
 
 @Configuration
 @EnableWebSecurity
@@ -58,10 +58,7 @@ public class webSecurityConfiguration{
 						.antMatchers("/css/**" , "/js/**" ,"/img/**","/file/**","/uploads/**").permitAll()
 						.antMatchers("/users/**").hasRole("USER")
 						.antMatchers("/admin/**").hasRole("ADMIN")
-						.antMatchers("/login").anonymous()
-						.antMatchers("/css/**" , "/js/**" ,"/img/**","/file/**","/uploads/**").permitAll()
 						.anyRequest().authenticated()
-						
 						.and()
 						
 						.formLogin()
