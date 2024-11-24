@@ -6,5 +6,5 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Mapper
 public interface userDetailRepository {
-	public abstract Optional<userDetailModel> loginProcess(@RequestParam(name = "username") String username);	
+	public abstract Optional<userDetailModel> loginProcess(@Param(name = "username") String username);	
 }
