@@ -47,7 +47,7 @@ public class webSecurityConfiguration{
 		authenticationProvider.setUserDetailsService(userDetailServiceImp);
 		return authenticationProvider;
 	}
-
+	
 	@Bean
 	public SecurityFilterChain filterChain( HttpSecurity httpSecurity ) throws Exception {
 	
@@ -64,57 +64,31 @@ public class webSecurityConfiguration{
 						.formLogin()
 						.loginPage("/login")
 						.loginProcessingUrl("/loginProcess") // as soon as we tuck down to the entire active btn
-						.successHandler( new AuthenticationSuccessHandler() {
-							
-							@Override
-							public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
-									Authentication authentication) throws IOException, ServletException {
-								String remember_me = "";
-								if( request.getCookies() != null ) {
-									for( Cookie cookie : request.getCookies() ) {
-										if(cookie.getName().equals("remember-me")) {
-											remember_me += cookie.getValue();
-										}
-									}		
-								}
-								
-								if( remember_me != null ) {
-									request.getSession().setAttribute("Custom-Remember-Me",remember_me);
-								}
-								
-								String username = authentication.getName();
-								SecurityContextHolder.getContext().setAuthentication(authentication);
-								Cookie successCookie = new Cookie("successCookie", "true");
-								successCookie.setPath("/posts");
-								successCookie.setHttpOnly(true);
-								
-								response.addCookie(successCookie);
-								response.setStatus(HttpServletResponse.SC_OK);
-								response.sendRedirect("/posts");
-							}
-							
-						})
+						.defaultSuccessUrl("/posts")
 						.failureForwardUrl("/login?errorPoppedUp=true")
+						.and()
+						
+						.rememberMe()
+						.key("unique")
+						.rememberMeCookieName("remember-me")
+						.rememberMeParameter("remember-me")
+						.tokenValiditySeconds((int)TimeUnit.SECONDS.toDays(21))
 						.and()
 						
 						.logout()
 						.logoutUrl("/logout")
 						.logoutSuccessUrl("/login?logout=success")
+						.logoutRequestMatcher(new AntPathRequestMatcher("/logout", "GET"))
 						.invalidateHttpSession(true)
 						.deleteCookies("JSESSIONID" , "remember-me")
-						
 						.and()
 						
-						.rememberMe()
-						.key("unique")
-						.alwaysRemember(true)
-						
-						.and()
 						.sessionManagement()
 						.maximumSessions(1)
 						.expiredUrl("/login?sessionExpired = true");
 			 
 						return httpSecurity.build();
 	}
+	
 	
 }
